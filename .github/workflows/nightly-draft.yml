@@ -1,0 +1,29 @@
+name: Nightly draft — tomorrow's Brief
+on:
+  schedule:
+    - cron: '45 0 * * *'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  build-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build tomorrow's issue
+        run: python build.py
+      - name: Open approval PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "suncoast-robot"
+          git config user.email "robot@suncoastbrief.com"
+          git checkout -B tomorrow
+          git add -A
+          git commit -m "Tomorrow's Brief — auto-draft $(date +%F)" || echo "no changes"
+          git push -f origin tomorrow
+          gh pr create --base main --head tomorrow --title "🌅 Tomorrow's Brief — tap Merge to approve" --body "Your robot built tomorrow's issue: fresh weather, tides, and headlines. Review, then tap Merge to publish." || gh pr edit tomorrow --title "🌅 Tomorrow's Brief — tap Merge to approve" || true
