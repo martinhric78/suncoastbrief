@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Suncoast Brief">
+<meta name="theme-color" content="#0B3B45">
+<meta name="description" content="Southeast Hillsborough's free morning newsletter — local news, weather, tides & fun, before your coffee's cold.">
+<title>The Suncoast Brief — Southeast Hillsborough's Morning Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --marine:#0B3B45; --teal:#0E6E73; --teal-br:#12888C; --gulf:#1FA8D6;
+    --gold:#F4A82C; --mango:#F2663C; --mango-d:#E0501F; --leaf:#3F9A63;
+    --plum:#7A53B5; --paper:#FFF9F0; --card:#FFFFFF; --ink:#18211F;
+    --slate:#566663; --sand:#EFE4D2; --sand-s:#FBF1E2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{background:#EDE3D2;color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:18px;line-height:1.62;padding:16px 10px 60px}
+  .wrap{max-width:600px;margin:0 auto;background:var(--paper);border-radius:20px;overflow:hidden;box-shadow:0 14px 44px rgba(11,59,69,.18)}
+
+  .alert{background:linear-gradient(90deg,var(--mango-d),var(--mango));color:#fff;padding:13px 18px;display:flex;gap:11px;align-items:flex-start}
+  .alert .dot{flex:none;width:10px;height:10px;border-radius:50%;background:#fff;margin-top:7px;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 9px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+  @media(prefers-reduced-motion:reduce){.alert .dot{animation:none}}
+  .alert .lab{font-weight:800;font-size:11px;letter-spacing:.13em;text-transform:uppercase;opacity:.95}
+  .alert h4{font-weight:700;font-size:15.5px;line-height:1.3;margin-top:1px}
+
+  .mast{background:var(--marine);padding:24px 22px 18px;text-align:center;color:#fff}
+  .kick{font-weight:700;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .name{font-family:'Fraunces';font-weight:900;font-size:52px;line-height:.9;letter-spacing:-.02em;margin:6px 0 5px}
+  .towns{font-weight:600;font-size:11px;letter-spacing:.05em;color:#A9CACC;line-height:1.6}
+  .rule{height:7px;background:linear-gradient(90deg,var(--teal-br),var(--gulf) 26%,var(--gold) 60%,var(--mango))}
+  .dline{background:#0E2A30;display:flex;justify-content:space-between;align-items:center;padding:9px 22px;color:#9DC0C2;font-size:12.5px;font-weight:600}
+  .dline .ed{color:var(--gold)}
+
+  .hero{position:relative;line-height:0}
+  .hero svg{width:100%;height:auto;display:block}
+  .hero .cap{position:absolute;left:0;right:0;bottom:0;padding:12px 16px;background:linear-gradient(transparent,rgba(7,30,34,.82));color:#fff;line-height:1.4}
+  .hero .cap .t{font-weight:800;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#FFD78A}
+  .hero .cap .s{font-family:'Fraunces';font-weight:500;font-size:15px}
+
+  .greet{padding:20px 22px 4px}
+  .greet p{font-family:'Fraunces';font-weight:500;font-size:20px;line-height:1.5}
+  .greet .by{display:block;margin-top:9px;font-family:'Inter';font-weight:600;font-size:13px;color:var(--mango-d)}
+
+  .body{padding:6px 18px 24px}
+  section{padding:20px 0;border-top:1px solid var(--sand)}
+  .chip{display:inline-flex;align-items:center;gap:7px;font-weight:800;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#fff;padding:6px 13px;border-radius:999px;margin-bottom:13px}
+  .c-wx{background:var(--gulf)} .c-tide{background:var(--teal)} .c-ss{background:var(--mango)}
+  .c-br{background:var(--marine)} .c-rv{background:var(--leaf)} .c-eat{background:var(--mango-d)}
+  .c-cook{background:#C2552E} .c-ask{background:#2C7A8C} .c-pet{background:var(--plum)}
+  .c-ev{background:var(--gold);color:#3a2a00} .c-star{background:var(--plum)}
+  h2.sec{font-family:'Fraunces';font-weight:700;font-size:24px;line-height:1.15;margin-bottom:3px}
+  .vo{font-weight:600;font-size:12.5px;color:var(--slate);font-style:italic;margin-top:2px}
+
+  .wx2{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:4px}
+  .wxc{border-radius:15px;padding:15px;color:#fff;overflow:hidden}
+  .wxc.coast{background:linear-gradient(135deg,#1FA8D6,#12888C)}
+  .wxc.inland{background:linear-gradient(135deg,#F4A82C,#E0501F)}
+  .wxc .zone{font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.95}
+  .wxc .twn{font-size:10.5px;font-weight:600;opacity:.85;margin-bottom:8px}
+  .wxc .row{display:flex;align-items:center;gap:8px}
+  .wxc .em{font-size:34px;line-height:1}
+  .wxc .tmp{font-family:'Fraunces';font-weight:900;font-size:38px;line-height:1}
+  .wxc .ds{font-weight:600;font-size:13px;margin-top:6px;line-height:1.4}
+  .wxnote{margin-top:11px;font-size:15.5px;line-height:1.55}
+  .wxnote b{color:var(--mango-d)}
+  .sunline{display:flex;gap:8px;margin-top:11px}
+  .sb{flex:1;background:var(--sand-s);border-radius:11px;padding:9px 10px;text-align:center}
+  .sb .k{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--slate)}
+  .sb .v{font-family:'Fraunces';font-weight:700;font-size:16px;color:var(--marine);margin-top:1px}
+
+  .tidewrap{background:linear-gradient(135deg,#E8F7FD,#F4FBFD);border:1px solid #D7EEF6;border-radius:15px;padding:15px 16px;margin-top:2px}
+  .tidewrap svg{width:100%;height:74px;display:block;margin:4px 0 6px}
+  .tlabs{display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:var(--teal)}
+  .tlabs .lo{color:var(--mango-d)}
+  .bite{background:#EAF6EE;border:1px solid #CDE9D6;border-radius:13px;padding:13px 15px;margin-top:11px;font-size:15.5px;line-height:1.55}
+  .bite .w{font-weight:800;color:var(--leaf)}
+  .bite .reg{font-size:14.5px;color:var(--slate);margin-top:8px}
+  .bite .reg .cl{color:var(--mango-d);font-weight:700}
+
+  .story{margin-top:15px;display:flex;gap:13px;align-items:flex-start}
+  .story .ic{flex:none;width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;background:var(--sand-s)}
+  .story h3{font-family:'Fraunces';font-weight:700;font-size:18.5px;line-height:1.25;margin-bottom:3px}
+  .story p{font-size:15.5px;color:#2b3633;line-height:1.55}
+  .story p+p{margin-top:7px}
+  .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--marine);background:#E4EEEC;padding:2px 8px;border-radius:6px;margin-bottom:5px}
+  .addr{display:block;margin-top:7px;font-size:13.5px;font-weight:700;color:var(--mango-d)}
+
+  .eatcard{border-radius:15px;overflow:hidden;border:1px solid var(--sand);margin-top:6px}
+  .eatcard .pic{height:120px;display:flex;align-items:center;justify-content:center;font-size:54px;background:linear-gradient(135deg,#F4A82C,#E0501F);position:relative}
+  .eatcard .pic .badge{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.9);color:var(--mango-d);font-weight:800;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:7px}
+  .eatcard .info{padding:14px 15px;background:var(--card)}
+  .eatcard h3{font-family:'Fraunces';font-weight:700;font-size:19px;margin-bottom:4px}
+  .eatcard p{font-size:15px;color:#2b3633;line-height:1.55}
+  .eatcard .addr{margin-top:8px}
+
+  .cook{display:flex;gap:14px;background:#FBEFE6;border:1px solid #F1D9C7;border-radius:15px;padding:15px;margin-top:4px}
+  .cook .plate{flex:none;width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#fff,#FCEBDA);display:flex;align-items:center;justify-content:center;font-size:40px;box-shadow:inset 0 0 0 4px #fff,0 4px 10px rgba(194,85,46,.18)}
+  .cook h3{font-family:'Fraunces';font-weight:700;font-size:18.5px;margin-bottom:4px}
+  .cook p{font-size:15px;color:#3a2b22;line-height:1.55}
+  .cook .ingr{font-size:13.5px;color:#8a5a3f;font-weight:600;margin-top:8px}
+
+  .ask{background:#E9F4F6;border:1px solid #CFE6EA;border-radius:15px;padding:15px 16px;margin-top:4px}
+  .ask .q{display:flex;gap:10px;align-items:flex-start}
+  .ask .av{flex:none;width:38px;height:38px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+  .ask .who{font-weight:700;font-size:14px;color:var(--marine)}
+  .ask .txt{font-family:'Fraunces';font-size:16.5px;line-height:1.45;margin-top:2px}
+  .ask .cta{font-size:13.5px;color:var(--teal);font-weight:700;margin-top:11px}
+
+  /* PET rows with shelter + address */
+  .pet{display:flex;gap:13px;background:var(--card);border:1px solid var(--sand);border-radius:15px;padding:12px;margin-top:11px}
+  .pet .pic{flex:none;width:88px;height:88px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:46px}
+  .pet.adopt .pic{background:linear-gradient(135deg,#E7DBF6,#D7C6F0)}
+  .pet.lost .pic{background:linear-gradient(135deg,#FCEFD6,#F8E0B4)}
+  .pet .lab{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--plum)}
+  .pet.lost .lab{color:var(--mango-d)}
+  .pet h4{font-family:'Fraunces';font-weight:700;font-size:17px;margin:1px 0 3px}
+  .pet p{font-size:14px;color:#2b3633;line-height:1.5}
+  .pet .adoptline{font-size:13px;font-weight:700;color:var(--marine);margin-top:6px;line-height:1.45}
+  .pet .adoptline span{color:var(--mango-d)}
+
+  .events li{list-style:none;padding:13px 0;border-bottom:1px dashed var(--sand);display:flex;gap:13px}
+  .events li:last-child{border-bottom:none}
+  .ev-day{flex:none;width:50px;text-align:center;background:var(--sand-s);border-radius:11px;padding:7px 4px;height:fit-content}
+  .ev-day .d{font-family:'Fraunces';font-weight:900;font-size:21px;line-height:1;color:var(--mango-d)}
+  .ev-day .m{font-size:10.5px;font-weight:700;text-transform:uppercase;color:var(--slate);letter-spacing:.05em}
+  .ev-txt b{font-size:16.5px}
+  .ev-txt p{font-size:14.5px;color:#2b3633;line-height:1.5;margin-top:3px}
+  .ev-txt .meta{font-size:13.5px;color:var(--slate);font-weight:600;margin-top:4px}
+  .ev-txt .meta b{color:var(--mango-d);font-size:13.5px}
+  .feat{font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:var(--mango);padding:2px 7px;border-radius:6px;margin-left:6px;vertical-align:middle}
+
+  .sp{background:linear-gradient(135deg,var(--marine),var(--teal));border-radius:16px;padding:20px;color:#fff;text-align:center}
+  .sp .tg{font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .sp h3{font-family:'Fraunces';font-weight:700;font-size:22px;margin:5px 0 7px}
+  .sp p{font-size:15px;color:#CFE6E7;margin-bottom:13px;line-height:1.55}
+  .btn{display:inline-block;background:var(--gold);color:#3a2a00;font-weight:800;font-size:14.5px;text-decoration:none;padding:11px 24px;border-radius:999px}
+
+  .poll{background:#FFF4DF;border:1px solid #F3DFB0;border-radius:15px;padding:16px;text-align:center}
+  .poll .q{font-family:'Fraunces';font-weight:700;font-size:18px;margin-bottom:5px}
+  .poll .sub{font-size:13px;color:var(--slate);margin-bottom:11px}
+  .poll .opts{display:flex;gap:9px}
+  .poll a{flex:1;text-decoration:none;background:#fff;border:1.5px solid var(--gold);color:var(--marine);font-weight:700;font-size:14px;padding:10px;border-radius:11px}
+
+  /* HOROSCOPE all 12 */
+  .horo-feat{background:linear-gradient(135deg,#F0E7FB,#E7DBF6);border:1px solid #E3D7F4;border-radius:14px;padding:15px 16px}
+  .horo-feat .badge{font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#7A53B5}
+  .horo-feat .sign{font-family:'Fraunces';font-weight:700;font-size:20px;color:#5B3E96;margin:2px 0 4px}
+  .horo-feat p{font-size:15.5px;color:#3b3050;line-height:1.55}
+  .horo-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:11px}
+  .hs{background:#F7F3FC;border:1px solid #EAE0F7;border-radius:11px;padding:10px 12px}
+  .hs .n{font-weight:800;font-size:13px;color:#5B3E96}
+  .hs p{font-size:12.5px;color:#42384f;line-height:1.45;margin-top:2px}
+  .horo-note{font-size:12.5px;color:var(--slate);margin-top:10px;text-align:center;line-height:1.5}
+
+  .so{text-align:center;padding:24px 18px 4px}
+  .so p{font-family:'Fraunces';font-size:18px;line-height:1.55}
+  .fwd{display:inline-block;margin-top:13px;background:var(--mango);color:#fff;font-weight:800;text-decoration:none;padding:12px 26px;border-radius:999px;box-shadow:0 6px 16px rgba(242,102,60,.3);font-size:14.5px}
+  .foot{text-align:center;color:var(--slate);font-size:12px;line-height:1.7;padding:20px 18px 24px}
+  .foot a{color:var(--teal)}
+
+  /* COFFEE BREAK */
+  .break-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:4px}
+  @media(max-width:440px){.break-grid{grid-template-columns:1fr}}
+  .bcard{border-radius:15px;padding:15px 16px}
+  .trivia{background:linear-gradient(135deg,#FFF1D2,#FCE3AE);border:1px solid #F3DFB0}
+  .trivia .h{font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#9A6A12}
+  .trivia .qq{font-family:'Fraunces';font-weight:700;font-size:17px;line-height:1.35;margin:5px 0 7px;color:#3a2a00}
+  .trivia .hint{font-size:12.5px;color:#8a6a2a;font-weight:700}
+  .tmrw{background:linear-gradient(135deg,#E3F4FB,#D2ECF6);border:1px solid #CDE6F2}
+  .tmrw .h{font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#1A6E86}
+  .tmrw .line{font-size:14px;line-height:1.5;margin:5px 0 9px;color:#143b46}
+  .tmrw .badge{display:inline-block;background:#fff;border:1px solid #BBD9E6;color:#1A6E86;font-weight:700;font-size:12px;padding:4px 10px;border-radius:8px}
+  .moon{display:flex;gap:8px;margin-top:11px}
+  .moon .m{flex:1;background:var(--sand-s);border-radius:11px;padding:9px 8px;font-size:12px;font-weight:600;color:var(--slate);text-align:center;line-height:1.3}
+  .moon .m b{display:block;font-family:'Fraunces';font-weight:700;font-size:13.5px;color:var(--marine);margin-top:3px}
+  .submit{display:inline-block;margin-top:13px;background:#fff;border:2px solid var(--gulf);color:var(--teal);font-weight:800;text-decoration:none;padding:11px 24px;border-radius:999px;font-size:14.5px}
+  .ans{background:#0E2A30;color:#9DC0C2;text-align:center;font-size:13.5px;padding:13px 18px;line-height:1.5}
+  .ans b{color:var(--gold)}
+
+  /* SUNCOAST ROOTS (history) */
+  .roots{background:linear-gradient(135deg,#F7EEDD,#F1E3C9);border:1px solid #E6D4AE;border-radius:15px;padding:16px}
+  .roots .top{display:flex;gap:13px;align-items:center;margin-bottom:11px}
+  .roots .medal{flex:none;width:54px;height:54px;border-radius:50%;background:radial-gradient(circle at 50% 38%,#fff,#EBD9B3);display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 3px 8px rgba(140,100,40,.2)}
+  .roots .when{font-weight:800;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:#9A6A12}
+  .roots h3{font-family:'Fraunces';font-weight:700;font-size:18.5px;line-height:1.22;color:#4a3414;margin-top:2px}
+  .roots p{font-size:15px;color:#41372a;line-height:1.6}
+  .roots p+p{margin-top:8px}
+  .roots .still{display:block;margin-top:10px;font-size:13px;font-weight:700;color:#8a5a1f}
+  .roots .ital{font-size:12px;color:#8a7a5a;font-style:italic;margin-top:11px;text-align:center}
+
+  /* DID YOU KNOW */
+  .dyk{background:linear-gradient(135deg,#E7F4EC,#D6EDDD);border:1px solid #C5E3CF;border-radius:15px;padding:16px;display:flex;gap:13px;align-items:flex-start}
+  .dyk .bulb{flex:none;width:50px;height:50px;border-radius:50%;background:radial-gradient(circle at 50% 38%,#fff,#FCE9B0);display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 3px 8px rgba(60,140,90,.18)}
+  .dyk .k{font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#2E7D52}
+  .dyk p{font-size:15.5px;color:#22402f;line-height:1.6;margin-top:3px}
+  .dyk p b{color:#1f6b45}
+  .dyk .ital{font-size:12px;color:#5a7a66;font-style:italic;margin-top:9px}
+
+  /* --- LIVE ticker --- */
+  .ticker{background:#07242B;display:flex;align-items:center;gap:0;overflow:hidden;height:44px}
+  .ticker .live{flex:none;display:flex;align-items:center;gap:7px;background:var(--mango-d);color:#fff;font-weight:800;font-size:11px;letter-spacing:.14em;padding:0 14px;height:100%;z-index:2}
+  .ticker .live .ld{width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.4s infinite}
+  .ticker .tlogo{flex:none;width:30px;height:30px;border-radius:50%;margin:0 10px;z-index:2}
+  .ticker .track{flex:1;overflow:hidden;position:relative;height:100%}
+  .ticker .items{display:flex;align-items:center;height:100%;gap:44px;white-space:nowrap;animation:tickermove 80s linear infinite;width:max-content}
+  .ticker .items span{color:#CFE9EC;font-size:13.5px;font-weight:600}
+  .ticker .items b{color:var(--gold)}
+  @keyframes tickermove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .ticker:hover .items{animation-play-state:paused}
+  /* --- banner masthead --- */
+  .mast{padding:0;background:var(--marine)}
+  .mast img{display:block;width:100%;height:auto}
+  .mast .towns{padding:11px 14px 13px}
+  /* --- gentle motion --- */
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+  .wxc .em{display:inline-block;animation:floaty 3.4s ease-in-out infinite}
+  @keyframes wavemove{from{transform:translateX(0)}to{transform:translateX(-90px)}}
+  .waveline{height:14px;overflow:hidden;margin:10px 0 2px}
+  .waveline svg{display:block;animation:wavemove 5s linear infinite}
+  /* --- scroll reveal --- */
+  .body section{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+  .body section.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .ticker .items,.wxc .em,.waveline svg{animation:none}
+    .body section{opacity:1;transform:none;transition:none}
+  }
+
+
+  .mast img.logobadge{width:96px !important;height:96px !important;max-width:96px;border-radius:50%;border:3px solid var(--gold);box-shadow:0 8px 22px rgba(0,0,0,.4);display:block;margin:-48px auto 6px;position:relative;z-index:3;background:#0B3B45}
+  /* --- swimming fish --- */
+  .aqua{position:relative;height:86px;overflow:hidden;margin:6px 0 8px;border-radius:12px;background:linear-gradient(180deg,rgba(31,168,214,.10),rgba(14,110,115,.20))}
+  .aqua span{position:absolute;will-change:transform;font-size:20px}
+  @keyframes swimR{from{transform:translateX(-60px) scaleX(-1)}to{transform:translateX(780px) scaleX(-1)}}
+  @keyframes swimL{from{transform:translateX(780px)}to{transform:translateX(-60px)}}
+  @keyframes scuttle{0%{transform:translateX(-40px)}48%{transform:translateX(340px)}52%{transform:translateX(340px) scaleX(-1)}100%{transform:translateX(-40px) scaleX(-1)}}
+  .aq1{top:6px;animation:swimR 14s linear infinite}
+  .aq2{top:20px;font-size:16px !important;animation:swimL 18s linear 2s infinite}
+  .aq3{top:34px;animation:swimR 11s linear 5s infinite}
+  .aq4{top:12px;font-size:15px !important;animation:swimR 22s linear 9s infinite}
+  .aq5{top:40px;font-size:17px !important;animation:swimL 16s linear 12s infinite}
+  .aq6{top:24px;font-size:30px !important;animation:swimR 26s linear 6s infinite}
+  .aq7{top:46px;font-size:14px !important;animation:swimR 13s linear 15s infinite}
+  .aq8{bottom:4px;font-size:17px !important;animation:scuttle 24s linear infinite}
+  .aq9{bottom:4px;font-size:15px !important;animation:scuttle 30s linear 10s infinite}
+  /* --- garden patch --- */
+  .gardenstrip{position:relative;height:74px;overflow:hidden;margin:6px 0 4px;border-radius:12px;background:linear-gradient(180deg,rgba(255,214,232,.25),rgba(63,154,99,.14))}
+  .gardenstrip .fl{position:absolute;bottom:2px;font-size:26px;transform-origin:bottom center;animation:sway 4.5s ease-in-out infinite}
+  .g1{left:12%} .g2{left:38%;animation-delay:1.2s;font-size:30px !important} .g3{left:64%;animation-delay:.6s} .g4{left:86%;animation-delay:1.8s;font-size:22px !important}
+  @keyframes sway{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+  .gardenstrip .bf{position:absolute;font-size:19px;animation:flutter 17s linear infinite}
+  .bf2{animation-delay:8s;animation-duration:23s;font-size:16px !important}
+  @keyframes flutter{0%{transform:translate(-40px,34px) rotate(-8deg)}20%{transform:translate(140px,8px) rotate(8deg)}40%{transform:translate(320px,30px) rotate(-8deg)}60%{transform:translate(480px,6px) rotate(8deg)}80%{transform:translate(620px,26px) rotate(-8deg)}100%{transform:translate(780px,10px) rotate(8deg)}}
+  /* --- sign picker --- */
+  .pickrow{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 12px;justify-content:center}
+  .pickrow button{border:1.5px solid #D9CBB2;background:#fff;border-radius:999px;padding:7px 12px;font-family:'Inter',sans-serif;font-weight:700;font-size:12.5px;color:var(--marine);cursor:pointer}
+  .pickrow button.on{background:#7A53B5;border-color:#7A53B5;color:#fff}
+  .pickrow button.enc{border-color:#B7995C;background:#FFF6E3}
+  .pickrow button.enc.on{background:#9A6A12;border-color:#9A6A12;color:#fff}
+  @media(prefers-reduced-motion:reduce){.aqua span,.gardenstrip .fl,.gardenstrip .bf{animation:none}.aq1{left:8px}.aq2{left:80px}.aq3{left:150px}.aq4{left:220px}.aq5{left:290px}.aq6{left:360px}.aq7{left:430px}.aq8{left:40px}.aq9{left:200px}.bf{left:30%;top:10px}.bf2{left:60%;top:20px}}
+
+
+  .roadstrip{position:relative;height:42px;overflow:hidden;margin:6px 0 4px;border-radius:12px;background:linear-gradient(180deg,#DFF3FA 58%,#D8D3BE 58%)}
+  .roadstrip .car{position:absolute;bottom:5px;font-size:20px;animation:drive 13s linear infinite}
+  .roadstrip .palm{position:absolute;top:3px;font-size:15px}
+  @keyframes drive{from{transform:translateX(-50px) scaleX(-1)}to{transform:translateX(780px) scaleX(-1)}}
+  @media(prefers-reduced-motion:reduce){.roadstrip .car{animation:none;left:40%}}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="ticker"><div class="live"><span class="ld"></span>LIVE</div><img class="tlogo" src="logo.png" alt="Suncoast Brief"><div class="track"><div class="items"><span>🤠 <b>Brandon:</b> Cavender\u2019s Boot City coming to Brandon Exchange</span><span>🚧 <b>Traffic:</b> pipeline work on Boyette, Kings &amp; Bloomingdale</span><span>🇺🇸 <b>Riverview:</b> two Army vets receive mortgage-free homes</span><span>🎣 <b>Fishing:</b> tarpon rolling the beaches — snook catch &amp; release</span><span>🌡️ <b>Heat advisory:</b> feels like 105\u00b0+ this afternoon</span><span>🐶 <b>Adopt:</b> half-price adoptions on dogs over 30 lbs</span><span>🤠 <b>Brandon:</b> Cavender\u2019s Boot City coming to Brandon Exchange</span><span>🚧 <b>Traffic:</b> pipeline work on Boyette, Kings &amp; Bloomingdale</span><span>🇺🇸 <b>Riverview:</b> two Army vets receive mortgage-free homes</span><span>🎣 <b>Fishing:</b> tarpon rolling the beaches — snook catch &amp; release</span><span>🌡️ <b>Heat advisory:</b> feels like 105\u00b0+ this afternoon</span><span>🐶 <b>Adopt:</b> half-price adoptions on dogs over 30 lbs</span></div></div></div>
+
+  <div class="alert">
+    <div class="dot"></div>
+    <div>
+      <div class="lab">⚠ Heads-up · National Weather Service</div>
+      <h4><!--ALERT-->Heat advisory today — feels like 105°+. Drink water, never leave kids or pets in a parked car (even a minute), and check on older neighbors.<!--/ALERT--></h4>
+    </div>
+  </div>
+
+  <div class="mast">
+    <img src="banner.jpg" alt="The Suncoast Brief — Southeast Hillsborough's morning read">
+    <img class="logobadge" src="logo.png" alt="The Suncoast Brief logo">
+    <div class="towns">RIVERVIEW · BRANDON · APOLLO BEACH · RUSKIN · FISHHAWK · VALRICO · SUN CITY · GIBSONTON · WIMAUMA</div>
+  </div>
+  <div class="rule"></div>
+  <div class="dline"><span id="sb-date">Saturday</span><span class="ed">Today's Edition · 🌅 4-min read</span></div>
+
+  
+  <div style="background:#0B3B45;border-radius:16px;padding:16px 18px;margin:14px 0;text-align:center">
+    <div style="font-family:'Fraunces',serif;font-weight:700;font-size:18px;color:#fff;margin-bottom:4px">Get the Brief free, every morning ☀️</div>
+    <div style="font-size:13.5px;color:#A9CACC;margin-bottom:12px">Local news, weather, tides &amp; fun — free in your inbox every morning.</div>
+    <a href="https://suncoastbrief.beehiiv.com/subscribe" style="display:inline-block;background:#F4A82C;color:#0B3B45;font-family:'Inter',sans-serif;font-weight:800;font-size:15px;text-decoration:none;padding:12px 28px;border-radius:999px">Subscribe free →</a>
+  </div>
+<div class="hero">
+    <svg viewBox="0 0 600 250" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sunrise over the bay">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCE9B8"/><stop offset="0.45" stop-color="#F7B36A"/><stop offset="0.8" stop-color="#EE8C5A"/><stop offset="1" stop-color="#E07A5A"/></linearGradient>
+        <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2FAAD6"/><stop offset="1" stop-color="#0E6E73"/></linearGradient>
+        <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFF6DC"/><stop offset="0.5" stop-color="#FFD86E"/><stop offset="1" stop-color="#FFB24D"/></radialGradient>
+      </defs>
+      <rect width="600" height="158" fill="url(#sky)"/>
+      <circle cx="300" cy="150" r="120" fill="#FFFFFF" opacity="0.12"/><circle cx="300" cy="150" r="78" fill="#FFFFFF" opacity="0.14"/><circle cx="300" cy="152" r="46" fill="url(#sun)"/>
+      <path d="M120 56 q12 -10 24 0 q12 -10 24 0" fill="none" stroke="#7a4636" stroke-width="3" stroke-linecap="round"/>
+      <path d="M165 40 q9 -8 18 0 q9 -8 18 0" fill="none" stroke="#7a4636" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M440 50 q10 -9 20 0 q10 -9 20 0" fill="none" stroke="#7a4636" stroke-width="3" stroke-linecap="round"/>
+      <rect y="158" width="600" height="92" fill="url(#sea)"/>
+      <rect x="288" y="158" width="24" height="92" fill="#FFE08A" opacity="0.5"/>
+      <g stroke="#EAFBFF" stroke-width="2" stroke-linecap="round" opacity="0.5"><line x1="60" y1="178" x2="120" y2="178"/><line x1="420" y1="186" x2="500" y2="186"/><line x1="150" y1="200" x2="230" y2="200"/><line x1="360" y1="208" x2="440" y2="208"/><line x1="80" y1="224" x2="180" y2="224"/><line x1="400" y1="230" x2="520" y2="230"/></g>
+      <path d="M470 168 l34 0 l-6 12 l-22 0 z" fill="#0B3B45"/><line x1="487" y1="168" x2="487" y2="150" stroke="#0B3B45" stroke-width="2"/><path d="M487 152 l14 12 l-14 0 z" fill="#FBF1E2"/>
+      <path d="M44 250 q6 -70 -2 -116" fill="none" stroke="#0B3B45" stroke-width="7" stroke-linecap="round"/>
+      <g fill="#0B3B45"><path d="M42 132 q-34 -10 -52 6 q30 -4 52 8z"/><path d="M42 132 q-14 -32 -40 -40 q18 24 40 50z"/><path d="M42 132 q22 -28 54 -28 q-28 12 -54 36z"/><path d="M42 132 q34 -6 56 14 q-30 -6 -56 4z"/></g>
+    </svg>
+    <div class="cap">
+      <div class="t">📸 Reader Photo of the Day</div>
+      <div class="s">Sunrise over the Alafia — sent in by a neighbor. Want to be featured? Submit yours at the bottom 👇</div>
+    </div>
+  </div>
+
+  <div class="greet">
+    <p>Good morning, neighbors. It's a hot one already and the storms are circling for the afternoon — but the bait's thick and there's plenty going on this weekend. Here's your Friday Brief.
+    <span class="by">— Martin & the Suncoast Brief team 🌴</span></p>
+  </div>
+
+  <div class="body">
+
+    <section style="border-top:none">
+      <span class="chip c-wx">☀ Today's Weather</span>
+      <div class="wx2">
+        <div class="wxc coast"><div class="zone">🌊 The Coast</div><div class="twn">Apollo Beach · Ruskin · Sun City</div><div class="row"><span class="em"><!--CEMO-->⛅<!--/CEMO--></span><span class="tmp"><!--CTMP-->89°<!--/CTMP--></span></div><div class="ds"><!--CDESC-->Gulf breeze takes the edge off. Storms build by late afternoon.<!--/CDESC--></div></div>
+        <div class="wxc inland"><div class="zone">🌳 Inland</div><div class="twn">Brandon · Valrico · FishHawk</div><div class="row"><span class="em"><!--IEMO-->⛈️<!--/IEMO--></span><span class="tmp"><!--ITMP-->93°<!--/ITMP--></span></div><div class="ds"><!--IDESC-->Hot, humid, heat index 105°+. Downpours likely 3–6 PM.<!--/IDESC--></div></div>
+      </div>
+      <p class="wxnote"><!--WXNOTE--><b>The take:</b> Textbook Florida summer Friday — get the outside stuff done before lunch, then let the afternoon storm cool things off. Inland, keep the umbrella by the door. And with this heat, double-check the back seat every single time you park.<!--/WXNOTE--></p>
+      <div class="sunline"><div class="sb"><div class="k">Sunrise</div><div class="v"><!--SUNRISE-->6:38a<!--/SUNRISE--></div></div><div class="sb"><div class="k">Sunset</div><div class="v"><!--SUNSET-->8:27p<!--/SUNSET--></div></div><div class="sb"><div class="k">Rain</div><div class="v"><!--RAIN-->70% PM<!--/RAIN--></div></div></div>
+    </section>
+
+    <section>
+      <span class="chip" style="background:#B03A3A">📰 Fresh Headlines</span>
+      <h2 class="sec">What happened while you slept</h2>
+      <div class="vo">— gathered automatically overnight from local news</div>
+      <ul style="margin:10px 0 0 18px;line-height:1.65;font-size:15px">
+<!--HEADLINES-->
+        <li><b>Brandon:</b> Cavender's Boot City is coming to the Brandon Exchange. <a href="https://www.google.com/search?q=Cavender%27s+Brandon+Exchange" style="color:#1a7fa8">source</a></li>
+        <li><b>Traffic:</b> South Hillsborough pipeline work continues on Boyette, Kings &amp; Bloomingdale. <a href="https://www.google.com/search?q=South+Hillsborough+pipeline+Boyette" style="color:#1a7fa8">source</a></li>
+        <li><b>Riverview:</b> Two wounded Army veterans receive mortgage-free homes. <a href="https://www.google.com/search?q=veterans+mortgage-free+homes+Riverview" style="color:#1a7fa8">source</a></li>
+<!--/HEADLINES-->
+      </ul>
+    </section>
+
+    <section>
+      <span class="chip c-tide">🎣 Tides &amp; Fishing</span>
+      <h2 class="sec">Tarpon are rolling — and the bait is everywhere</h2>
+      <div class="vo">— The Tackle Box</div><div class="waveline"><svg width="1000" height="14" viewBox="0 0 1000 14" xmlns="http://www.w3.org/2000/svg"><path d="M0 7 q22.5 -7 45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0 t45 0" fill="none" stroke="#1FA8D6" stroke-width="2.5" stroke-linecap="round"/></svg></div><div class="aqua"><span class="aq1">🐟</span><span class="aq2">🐠</span><span class="aq3">🐟</span><span class="aq4">🐡</span><span class="aq5">🦐</span><span class="aq6">🦈</span><span class="aq7">🐠</span><span class="aq8">🦀</span><span class="aq9">🦀</span></div>
+      <div class="horo-feat" style="background:#E8F4F8;margin:8px 0 4px">
+        <div class="badge" style="color:#0E6E73">🎯 Catch of the day</div>
+        <div class="sign" id="sb-species" style="color:#0E6E73"></div>
+        <p id="sb-catch"></p>
+      </div>
+      <div class="bite" style="margin-top:12px">
+        <span class="w">🟢 What's biting:</span> It's tarpon time — the big poons (80–120 lb) are working the beaches, passes, and the Skyway. Redfish and trout are chewing the flats early on moving water, with mangrove snapper stacked around any structure. Bait's thick: greenbacks and threadfins everywhere, and the pass crabs are running for the tarpon.
+        <div class="reg"><!--TIDES-->Best plan in this heat: fish dawn, dusk, or under the dock lights at night. Work moving tides — the morning high and the evening change. <span class="cl">Snook are closed for the summer</span> (catch &amp; release till Sept 1), but they're stacked in the passes if you want the fight.<!--/TIDES--></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="chip" style="background:#C2559B">🌸 The Garden Patch</span>
+      <h2 class="sec">Grow it, pick it, eat it</h2>
+      <div class="vo">— The Garden Patch · what to grow &amp; why it's good for you</div>
+      <div class="gardenstrip"><span class="fl g1">🍅</span><span class="fl g2">🌽</span><span class="fl g3">🍊</span><span class="fl g4">🍓</span><span class="bf">🦋</span><span class="bf bf2">🐝</span></div>
+      <div class="horo-feat" style="background:#FDEFF6;margin-top:6px">
+        <div class="badge" style="color:#B03A83">🌱 Grow &amp; eat · today's crop</div>
+        <div class="sign" id="sb-crop" style="color:#B03A83"></div>
+        <p id="sb-garden"></p>
+      </div>
+    </section>
+
+    <section>
+      <span class="chip c-br">🏡 Brandon Area</span>
+      <div class="vo" style="margin-bottom:6px">Brandon · Valrico · Bloomingdale</div>
+      <div class="story">
+        <div class="ic">🤠</div>
+        <div><span class="tag">Brandon · New</span>
+        <h3>Cavender's is bringing a Boot City to Brandon</h3>
+        <p>The Texas western-wear chain — handcrafted boots, hats, and workwear — has signed for its first Tampa Bay store: a 15,000-sq-ft spot at the Brandon Exchange, in the old DSW. Saddle up, the cowboys finally have a home base on this side of the bay.</p>
+        <span class="addr">📍 949 Brandon Town Center Dr, Brandon</span></div>
+      </div>
+      <div class="story">
+        <div class="ic">🚧</div>
+        <div><span class="tag">Traffic · Bloomingdale</span>
+        <h3>Pipeline work is snarling Boyette, Kings &amp; Bloomingdale</h3>
+        <p>The big $500M South Hillsborough water pipeline (26 miles of it) is in full swing, and crews are causing lane shifts and detours along Boyette Rd, Kings Ave, and Bloomingdale Ave. Build in a few extra minutes on those roads for a while.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="chip c-rv">🎣 Riverview &amp; FishHawk</span>
+      <div class="vo" style="margin-bottom:6px">Riverview · FishHawk · Boyette</div>
+      <div class="story">
+        <div class="ic">🇺🇸</div>
+        <div><span class="tag">Riverview · Good News</span>
+        <h3>Two wounded Army vets are getting mortgage-free homes here</h3>
+        <p>Combat-injured veterans Ryan Heard and Carson Shaw were each chosen for a mortgage-free home in Riverview through Building Homes for Heroes and Built to Honor. A good reminder of the kind of neighbors we've got. Welcome home, gentlemen. 🇺🇸</p></div>
+      </div>
+      <div class="story">
+        <div class="ic">🌡️</div>
+        <div><span class="tag">Safety · All Towns</span>
+        <h3>A gentle, important reminder in this heat</h3>
+        <p>After a heartbreaking loss in Riverview last weekend, first responders are urging everyone to never leave a child or pet in a parked car — not even for a minute. In our summer, a closed car can reach deadly temperatures in just a few minutes. Make "check the back seat" a habit every time. 💙</p></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="chip c-pet">🐶 Paws Around the Bay</span>
+      <div class="vo" style="margin-bottom:4px">Real animals only — each morning we feature a real adoptable pet from the shelter’s live listings</div>
+      <div class="pet adopt">
+        <div class="pic">🐕</div>
+        <div>
+          <div class="lab">Adopt or foster</div>
+          <h4>Big dogs need homes — and there's a deal on</h4>
+          <p>The Humane Society of Tampa Bay has been overflowing with medium and large dogs, so they're running <b>half-price adoptions on dogs over 30 lbs — plus a free harness &amp; leash.</b> Even fostering for a weekend opens up a kennel and saves a life.</p>
+          <div class="adoptline"><span>📍 Adopt:</span> Humane Society of Tampa Bay, 3607 N Armenia Ave, Tampa · open 10–5 · see today's dogs at humanesocietytampa.org/adopt</div>
+        </div>
+      </div>
+      <div class="pet lost">
+        <div class="pic">🐾</div>
+        <div>
+          <div class="lab">Closer to home</div>
+          <h4>Or check the county shelter</h4>
+          <p>The Pet Resource Center is right off Falkenburg — dogs, cats, and low-cost adoptions, minutes from Brandon and Riverview.</p>
+          <div class="adoptline"><span>📍 Adopt:</span> <a href="https://www.google.com/maps/search/?api=1&query=440+N+Falkenburg+Rd+Tampa+FL" style="color:#0E6E73;font-weight:800">Pet Resource Center, 440 N Falkenburg Rd, Tampa</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="chip c-ev">📅 This Weekend</span>
+      <ul class="events">
+        <li><div class="ev-day"><div class="d">27</div><div class="m">Sat</div></div><div class="ev-txt"><b>Show Off Your Rides + MF BBQ</b><span class="feat">Featured</span><p>Classic cars, trucks, and BBQ in the lot. Free to walk around — roll in around 4 once the heat breaks.</p><div class="meta"><b>📍 11531 Balmriverview Rd, Riverview</b> · Sat 3 PM · free</div></div></li>
+        <li><div class="ev-day"><div class="d">26</div><div class="m">Fri</div></div><div class="ev-txt"><b>Tampa Bay Boat Show</b><p>Boats, gear, and show-only deals all weekend at the Fairgrounds. Free admission — a solid air-conditioned escape from the heat.</p><div class="meta"><b>📍 FL State Fairgrounds</b> · Fri–Sun 10 AM–5 PM · free</div></div></li>
+        <li><div class="ev-day"><div class="d">27</div><div class="m">Sat</div></div><div class="ev-txt"><b>Community Pet Vaccine Clinic</b><p>Low-cost rabies &amp; core shots — dogs leashed, cats in carriers, no appointment.</p><div class="meta"><b>📍 7015 US-301 S, Riverview</b> · Sat 11 AM–2 PM</div></div></li>
+        <li><div class="ev-day"><div class="d">28</div><div class="m">Sun</div></div><div class="ev-txt"><b>Rays vs. Diamondbacks — Family Funday</b><p>Kids run the bases after the game. The Rays have been red-hot — fun, cheap day out.</p><div class="meta"><b>📍 Tropicana Field, St. Pete</b> · Sun 1:40 PM · from $17</div></div></li>
+        <li><div class="ev-day"><div class="d">28</div><div class="m">Sun</div></div><div class="ev-txt"><b>FREE Summer Sing-Along: High School Musical</b><p>Tampa Theatre takes its sing-along outdoors. First 100 folks get a free LED fan + popcorn.</p><div class="meta"><b>📍 Sparkman Wharf, Tampa</b> · Sun 6 PM · free</div></div></li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="sp">
+        <div class="tg">Today's Sponsor</div>
+        <h3>Tampa Sarasota Handyman</h3>
+        <p>Storm season's here — gutters, leaks, loose shutters, that honey-do list. One call and it's handled. Brief readers get 10% off this month.</p>
+        <a class="btn" href="mailto:tampasarasotahandyman@gmail.com?subject=Handyman%20visit%20—%20from%20The%20Suncoast%20Brief">Book a visit →</a>
+      </div>
+    </section>
+
+    <section>
+      <span class="chip" style="background:#6E4A1A">📖 Suncoast Roots</span>
+      <div class="roots">
+        <div class="top"><div class="medal">🎡</div><div><div class="when">Where you live · Gibsonton</div><h3>How "Gibtown" became the Sideshow Capital of the World</h3></div></div>
+        <p>That quiet stretch of Gibsonton along the Alafia was once the most famous carnival town in America. From the 1940s on, circus and sideshow performers wintered here — and the town wrote special zoning so neighbors could keep elephants and carnival rides in their front yards. The post office even built a low counter for residents with dwarfism, the first of its kind in the country.</p>
+        <p>Its most beloved couple were Al and Jeanie Tomaini — "The Giant" at 7'4" and "The Half-Girl" at 2'6" — who ran the Giant's Camp fishing lodge. Al gave the town its first ambulance and was its volunteer fire chief.</p>
+        <span class="still">📍 Still here: the Tomaini marker on US-41, and the Showmen's Museum.</span>
+      </div>
+    </section>
+
+    <section>
+      <span class="chip" style="background:#2E7D52">💡 Did You Know?</span>
+      <div class="dyk">
+        <div class="bulb">⚡</div>
+        <div>
+          <div class="k">A little Florida wonder</div>
+          <p><b>Did you know</b> our corner of Florida sits in "Lightning Alley"? The stretch between Tampa and Orlando gets more lightning per square mile than almost anywhere in the U.S. — it's why those afternoon storms are so reliable, and why the hockey team's named the Lightning. ⚡</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="chip" style="background:#9A6A12">☕ The Coffee Break</span>
+      <div class="break-grid">
+        <div class="bcard trivia"><div class="h">🧠 Trivia of the day</div><div class="qq">What kind of fish gave its name to the FishHawk community?</div><div class="hint">Answer's at the very bottom 👇</div></div>
+        <div class="bcard tmrw"><div class="h">🔮 Tomorrow's outlook</div><div class="line">More of the same — hot, 90s, afternoon boomers. Best beach &amp; fishing window is before 11 AM.</div><span class="badge">👍 Good day for: an early start</span></div>
+      </div>
+      <div class="moon"><div class="m">🌙 Moon<b>Waxing crescent</b></div><div class="m">🌅 Sunset<b>8:27 tonight</b></div><div class="m">🦟 Bug report<b>High after rain</b></div></div>
+    </section>
+
+    <section>
+      <span class="chip" style="background:#1a7fa8">🗺️ Free Day Out</span>
+      <h2 class="sec">Worth the drive — and it costs nothing</h2>
+      <div class="vo">— a new free spot every day, all within ~50 minutes</div>
+      <div class="roadstrip"><span class="palm" style="left:14%">🌴</span><span class="palm" style="left:46%">🌴</span><span class="palm" style="left:78%">🌴</span><span class="car">🚗</span></div>
+      <div class="horo-feat" style="background:#E8F4FA;margin-top:6px">
+        <div class="badge" style="color:#1a7fa8">📍 Today's free adventure</div>
+        <div class="sign" id="sb-place" style="color:#1a7fa8"></div>
+        <p id="sb-placetext"></p>
+      </div>
+    </section>
+
+    <section>
+      <span class="chip c-star">✨ Stars Over the Bay</span>
+      <div style="font-size:13px;color:var(--slate);margin:8px 0 4px;text-align:center">Make your morning yours — pick any mix. Your phone remembers.</div>
+      <div class="pickrow" id="sb-signs"></div>
+      <div class="pickrow" id="sb-extras"></div>
+      <div id="sb-cards"></div>
+      <div class="horo-note">Choose your sign, 📖 Bible verse, 💭 wisdom words — one, two, or all three. Tap again to remove one.</div>
+    </section>
+
+    <div class="so">
+      <p>That's your Friday, neighbors. 🌊<br>See something we should know — an event, a new shop, a lost dog? Just hit reply. A real person reads every one.</p>
+      <p style="font-size:14.5px;color:var(--slate);margin-top:11px;font-family:'Inter';line-height:1.5">📸 Got a great sunrise, sunset, or wildlife shot? Send it in — we feature one neighbor's photo up top every morning.</p>
+      <a class="submit" href="mailto:tampasarasotahandyman@gmail.com?subject=Photo%20for%20The%20Suncoast%20Brief">Submit your photo →</a><br>
+      <a class="fwd" href="mailto:?subject=You%27d%20like%20The%20Suncoast%20Brief&body=Morning%20neighbor%20—%20I%20read%20this%20free%20local%20morning%20brief%20and%20thought%20of%20you%3A%20https%3A%2F%2Fsuncoastbrief.com">Forward to a neighbor →</a>
+    </div>
+  </div>
+
+  <div class="ans">🧠 <b>Trivia answer:</b> The osprey — a fish hawk. The bird that dives for fish in the Alafia gave FishHawk its name.</div>
+
+  
+  <div style="background:#FFF9F0;border:2px solid #F4A82C;border-radius:16px;padding:18px;margin:16px 0;text-align:center">
+    <div style="font-size:26px;margin-bottom:4px">📱</div>
+    <div style="font-family:'Fraunces',serif;font-weight:700;font-size:17px;color:#0B3B45;margin-bottom:6px">Want the Brief as an app?</div>
+    <div style="font-size:14px;color:#566663;line-height:1.6">Tap the <b>Share</b> button in your browser, then <b>"Add to Home Screen."</b><br>Our sunrise icon lands on your phone — tap it any morning for the latest Brief.</div>
+  </div>
+<div class="foot">
+    The Suncoast Brief · Southeast Hillsborough's morning read<br>
+    Written for neighbors, by a neighbor. · <a href="https://suncoastbrief.beehiiv.com/subscribe">Get the free email</a> · <a href="mailto:tampasarasotahandyman@gmail.com?subject=Advertising%20in%20The%20Suncoast%20Brief">Advertise with us</a>
+  </div>
+
+</div>
+<script>
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.body section').forEach(function(s){s.classList.add('in')});
+    return;
+  }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold: 0.08});
+  document.querySelectorAll('.body section').forEach(function(s){ io.observe(s); });
+})();
+</script>
+<script>
+(function(){
+  var H = {
+    "Aries":["♈","Your energy opens doors today — one bold, kind move sets the tone for the whole weekend."],
+    "Taurus":["♉","Slow and steady wins today. Something you have been patiently building starts to pay off."],
+    "Gemini":["♊","A conversation today brings exactly the answer you needed — stay curious and say hello first."],
+    "Cancer":["♋","Home is calling. That little project finally clicks — and the people you love are the whole point."],
+    "Leo":["♌","Your warmth is contagious today. Share the spotlight and it shines back twice as bright."],
+    "Virgo":["♍","The details you notice today save the day. Trust your eye — then treat yourself tonight."],
+    "Libra":["♎","Balance returns. A fair choice you make today quietly earns someone's lasting respect."],
+    "Scorpio":["♏","Trust your gut on a decision you have been circling — you already know the answer. Quiet confidence beats loud moves today."],
+    "Sagittarius":["♐","Adventure is closer than you think — say yes to the invitation, even the small one."],
+    "Capricorn":["♑","Your steady work is being noticed. Finish the one thing today and the week opens up."],
+    "Aquarius":["♒","Your different way of seeing things is exactly what someone needs today. Share the idea."],
+    "Pisces":["♓","Your kindness ripples farther than you know. The water is calling — take ten minutes by it."]
+  };
+  var BIBLE = [
+    "This is the day the Lord has made; let us rejoice and be glad in it. — Psalm 118:24",
+    "Be strong and courageous. Do not be afraid; the Lord your God goes with you. — Deuteronomy 31:6",
+    "I can do all things through Christ who strengthens me. — Philippians 4:13",
+    "Let all that you do be done in love. — 1 Corinthians 16:14",
+    "For I know the plans I have for you — plans to give you hope and a future. — Jeremiah 29:11",
+    "Let your light shine before others. — Matthew 5:16",
+    "God is within her; she will not fall. — Psalm 46:5",
+    "Trust in the Lord with all your heart. — Proverbs 3:5"
+  ];
+  var WISDOM = [
+    "Every sunrise is a fresh page. Write something kind on it today.",
+    "The tide always comes back in. Whatever today holds, so do you.",
+    "Give thanks for a little, and you will find a lot.",
+    "A good neighbor is a found treasure. Be one today.",
+    "Small steps every morning beat big plans every never.",
+    "You cannot pour from an empty cup — fill yours first today.",
+    "The best time to plant a tree was 20 years ago. The second best time is this morning.",
+    "Kind words cost nothing and are worth everything."
+  ];
+  var signsRow = document.getElementById('sb-signs');
+  var extrasRow = document.getElementById('sb-extras');
+  var cards = document.getElementById('sb-cards');
+  if(!signsRow) return;
+
+  var pref = {sign:null, bible:false, wisdom:true};
+  try { var s = localStorage.getItem('sb-pref2'); if(s) pref = JSON.parse(s); } catch(e) {}
+  function save(){ try{ localStorage.setItem('sb-pref2', JSON.stringify(pref)); }catch(e){} }
+  function dayIndex(){ var n=new Date(); return Math.floor((n - new Date(n.getFullYear(),0,0))/86400000); }
+
+  function card(badge, title, text, bg, accent){
+    return '<div class="horo-feat" style="background:'+bg+';margin-bottom:10px">'
+      + '<div class="badge" style="color:'+accent+'">'+badge+'</div>'
+      + '<div class="sign" style="color:'+accent+'">'+title+'</div>'
+      + '<p>'+text+'</p></div>';
+  }
+  function render(){
+    signsRow.querySelectorAll('button').forEach(function(b){ b.classList.toggle('on', b.dataset.v===pref.sign); });
+    extrasRow.querySelectorAll('button').forEach(function(b){
+      if(b.dataset.v==='bible') b.classList.toggle('on', pref.bible);
+      if(b.dataset.v==='wisdom') b.classList.toggle('on', pref.wisdom);
+    });
+    var out = '';
+    var SPICE = [
+      "Lucky window: the morning — start the important thing before noon.",
+      "Someone nearby needs the exact kindness you're good at. You'll know it when you see it.",
+      "A small money matter turns in your favor if you handle it today instead of tomorrow.",
+      "Water is your friend today — the bay, a walk after rain, even a long glass of it.",
+      "An old friend crosses your mind for a reason. Send the text.",
+      "Patience wins today — the slow answer is the right one.",
+      "Say the encouraging thing out loud. It lands bigger than you think."
+    ];
+    if(pref.sign && H[pref.sign]){
+      var sIdx = Object.keys(H).indexOf(pref.sign);
+      var spice = SPICE[(dayIndex()+sIdx) % SPICE.length];
+      out += card(H[pref.sign][0]+" Your sign today", pref.sign, H[pref.sign][1] + " " + spice, '#F3EDFF', '#6B46C1');
+    }
+    if(pref.bible) out += card("📖 Today's verse", "From the Good Book", BIBLE[dayIndex()%BIBLE.length], '#FFF6E3', '#8a5a00');
+    if(pref.wisdom) out += card("💭 Wisdom for today", "A thought for the road", WISDOM[dayIndex()%WISDOM.length], '#E9F6EE', '#1F6E45');
+    if(!out) out = card("✨ Your morning, your way", "Nothing selected yet", "Tap your sign, 📖 Bible verse, or 💭 wisdom words above — mix any you like.", '#F5F1E8', '#566663');
+    cards.innerHTML = out;
+  }
+  Object.keys(H).forEach(function(s){
+    var b = document.createElement('button');
+    b.textContent = H[s][0] + " " + s; b.dataset.v = s;
+    b.onclick = function(){ pref.sign = (pref.sign===s ? null : s); save(); render(); };
+    signsRow.appendChild(b);
+  });
+  var bb = document.createElement('button');
+  bb.textContent = "📖 Bible verse"; bb.dataset.v='bible'; bb.className='enc';
+  bb.onclick = function(){ pref.bible = !pref.bible; save(); render(); };
+  extrasRow.appendChild(bb);
+  var wb = document.createElement('button');
+  wb.textContent = "💭 Wisdom words"; wb.dataset.v='wisdom'; wb.className='enc';
+  wb.onclick = function(){ pref.wisdom = !pref.wisdom; save(); render(); };
+  extrasRow.appendChild(wb);
+  render();
+})();
+</script>
+<script>
+(function(){
+  var SPECIES = [
+    ["Tarpon","The silver king — 80 to 120 pounds of chrome rolling the beaches and passes right now. The fight of a lifetime, and every one swims free."],
+    ["Snook","The linesider — ambushing bait in the passes and under dock lights. Catch & release till Sept 1, but what a catch."],
+    ["Redfish","That copper flash tailing on the flats at first light. Look for the black spot on the tail — sometimes more than one."],
+    ["Spotted Seatrout","The everyman's fish — soft bite, spotted back, and they love a popping cork over grass flats."],
+    ["Mangrove Snapper","Sneaky, snappy, and stacked around every dock and rock pile. Light line and small hooks fool the big ones."],
+    ["Sheepshead","The convict fish — black and white stripes and human-looking teeth for crunching barnacles. Great eating."],
+    ["Flounder","The flatfish that lies in ambush on sandy bottoms. Both eyes on one side and delicious on any plate."],
+    ["Gag Grouper","The bulldog of the reefs — hooks up and dives straight for the rocks. Hold on tight."],
+    ["Spanish Mackerel","Fast, flashy, and toothy — when the birds are diving, the Spanish are slashing bait below."],
+    ["King Mackerel","The smoker king — screaming drag runs that empty a reel. Troll the beaches when bait is thick."],
+    ["Cobia","The curious brown bomber — follows rays and buoys. Looks like a shark, fights like a truck."],
+    ["Jack Crevalle","The bay's street brawler — pound for pound one of the hardest fighters that swims."],
+    ["Pompano","The gold nugget of the surf — skipping across the waves and worth every cast. Superb on the table."],
+    ["Black Drum","The big ugly that pulls like a freight train. The little ones taste great; the giants deserve a photo and a release."],
+    ["Tripletail","The weirdo that floats sideways under crab buoys pretending to be a leaf. Don't be fooled — great fighter."],
+    ["Ladyfish","The poor man's tarpon — jumps ten times, tangles your line, and keeps kids grinning all day."],
+    ["Bonnethead Shark","The little hammerhead of the flats — usually 2 to 3 feet, feeds on crabs, and fights way above its weight."],
+    ["Blacktip Shark","Summer's acrobat — blistering runs and full jumps. Respect the teeth, enjoy the show."],
+    ["Blue Crab","The bay's feisty treasure — a chicken neck on a string off any dock is all it takes. Kids' favorite."],
+    ["Stone Crab","Florida's famous claw — season runs Oct 15 to May 1. Take one claw, release the crab, it grows back."]
+  ];
+  var GARDEN = [
+    ["Everglades Tomatoes","Regular tomatoes sulk in our summer, but the tiny native Everglades tomato thrives in pure Florida heat and shrugs off bugs and disease. Plant one in a sunny spot, water it deep a few times a week, and it rewards you with sweet currant-size tomatoes almost year-round — and it reseeds itself, so one plant becomes a patch. For big slicing tomatoes, start seeds indoors in late July for the fall garden, which is Florida's REAL tomato season.","Tomatoes are loaded with lycopene — great for your heart and skin — plus vitamin C and potassium."],
+    ["Okra","If there is one vegetable that genuinely LOVES a Florida summer, it's okra. Plant seeds right now in full sun, keep them watered the first two weeks, and pods start coming in about 55 days — pick them small (3–4 inches) and pick often, because the more you cut, the more it makes. Clemson Spineless is the classic variety and nearly foolproof here.","Okra is full of fiber and vitamin K, supports healthy digestion, and helps steady blood sugar."],
+    ["Sweet Potatoes","Stick a store sweet potato in water until it sprouts 'slips,' twist them off, and plant them in a sunny mound — that's it. They love our heat and sandy soil, need almost no care, and in about 100 days you dig up dinner. The young leaves are edible too — sauté them like spinach.","Sweet potatoes are one of the healthiest foods on earth — beta-carotene for your eyes, fiber, and slow-burning energy."],
+    ["Mango Tree","One grafted mango tree turns a Florida backyard into a summer fruit stand — June and July are harvest months right now across the bay. Plant a young grafted tree (not from seed) in full sun with room to grow; 'Glenn' and 'Carrie' stay small and fruit fast, often within 2–3 years. Water deeply the first year, then it mostly takes care of itself.","Mangoes pack vitamins A and C for your immune system and skin — sunshine you can eat."],
+    ["Papaya","Papaya might be Florida's fastest fruit: plant seeds from a grocery papaya today, and healthy plants can flower within months and fruit in under a year. Give it sun, rich soil, and steady water — and plant three or four, since some will be males that don't fruit. In our warm winters they keep right on producing.","Papaya is packed with vitamin C and papain, an enzyme famous for helping digestion."],
+    ["Pineapple","Don't throw away the top of a store pineapple — twist it off, let it dry two days, and plant it. It roots easily, asks for almost nothing but sun, and in 18–24 months hands you a homegrown pineapple sweeter than anything in the store. Line a few along a fence and you'll never buy another top.","Pineapple's bromelain fights inflammation, and one fruit is loaded with vitamin C and manganese."],
+    ["Strawberries","We live next door to the Winter Strawberry Capital of the World — Plant City — and you can grow the same berries. Set out plants in October (Florida grows strawberries through the WINTER, opposite of up north), give them sun and steady water, and you'll pick from Thanksgiving to spring. 'Sweet Sensation' and 'Festival' are the local stars.","Strawberries are vitamin C champions with antioxidants that love your heart back."],
+    ["Peppers","Sweet or hot, peppers are heat machines that fit anywhere — even a 5-gallon bucket on the porch. Datil, jalapeño, and banana peppers handle Florida summers well; give them 6+ hours of sun and feed monthly. Pick continuously and the plants produce for many months in our long season.","Peppers have more vitamin C than oranges, and the hot ones' capsaicin gives your metabolism a nudge."],
+    ["Meyer Lemon (in a pot)","You don't need a grove — one Meyer lemon in a big pot on a sunny patio gives you fragrant blossoms and real lemons at home. Pot it in citrus mix, water when the top inch is dry, feed with citrus fertilizer a few times a year, and it can fruit nearly year-round. Key limes grow the same easy way.","Fresh lemon is pure vitamin C and makes drinking more water effortless — your kidneys approve."],
+    ["Bananas","Bananas grow like happy weeds here if you feed them: full sun, lots of water, compost or fertilizer monthly. Plant a dwarf variety like 'Dwarf Cavendish,' and in 12–18 months you'll cut a whole rack of your own bananas. Each stalk fruits once, but pups keep the patch going forever.","Bananas are famous for potassium — great for blood pressure, muscles, and steady energy."],
+    ["Herbs That Beat the Heat","Basil, rosemary, oregano, and Cuban oregano genuinely enjoy Florida summers — a few pots by the kitchen door and you snip dinner seasoning for free all year. Basil wants water and regular pinching; rosemary wants sun and to be left alone. (Mint too — but always in its own pot, or it conquers the yard.)","Fresh herbs are antioxidant powerhouses and the easiest way to make healthy food taste amazing."],
+    ["Collards & Kale","When fall arrives, greens take over the Florida garden — plant collards and kale from September through winter and harvest leaf by leaf for months from the same plants. They laugh at our 'cold,' get sweeter after cool nights, and one 4x4 bed feeds a family's Sunday pots all season.","Leafy greens are among the most nutrient-dense foods there are — calcium, iron, and vitamin K by the bowlful."],
+    ["Blueberries","Yes, blueberries grow in Florida — the University of Florida bred special low-chill varieties just for us. Plant 'Emerald' or 'Jewel' in a big pot or bed of pine bark (they want acidic soil), give them sun, and pick sweet berries every spring. Two bushes pollinate each other and double your harvest.","Blueberries are brain food — their antioxidants are linked to memory and healthy aging."],
+    ["Fig Tree","A 'Brown Turkey' fig might be the easiest fruit tree in Florida: plant it, water it its first summer, and get out of its way. Figs ripen in early summer, fresh off the tree they taste nothing like the dried ones, and the tree asks for almost zero care once established.","Figs bring fiber, calcium, and potassium — sweet treats that are actually good for you."],
+    ["Florida Avocados","Skip the little Hass — Florida grows its own bigger, brighter avocados. Plant a grafted 'Brogdon' or 'Choquette' tree in full sun with good drainage, water deeply while young, and in a few years you're picking avocados by the bagful every summer and fall.","Avocados are full of the good fats your heart loves, plus potassium and folate."],
+    ["Cucumbers","In Florida we grow cucumbers twice a year — plant seeds in September and again in February, give them a fence or trellis to climb, and they sprint from seed to crunchy cukes in about 50 days. Pick daily once they start; they hide under leaves and grow overnight.","Cucumbers are 95% water — built-in hydration with vitamin K, perfect for our heat."]
+  ];
+  function dayIndex(){ var n=new Date(); return Math.floor((n - new Date(n.getFullYear(),0,0))/86400000); }
+  var sp = document.getElementById('sb-species');
+  var ca = document.getElementById('sb-catch');
+  var ga = document.getElementById('sb-garden');
+  if(sp && ca){ var s = SPECIES[dayIndex()%SPECIES.length]; sp.textContent = s[0]; ca.textContent = s[1]; }
+  var cr = document.getElementById('sb-crop');
+  if(ga && cr){ var g = GARDEN[dayIndex()%GARDEN.length]; cr.textContent = g[0]; ga.innerHTML = g[1] + '<br><br><b style="color:#B03A83">💪 Good for you:</b> ' + g[2]; }
+})();
+</script>
+<script>
+(function(){
+  var PLACES = [
+    ["TECO Manatee Viewing Center — Apollo Beach","Right in our backyard: when the bay cools down, hundreds of wild manatees pile into the warm water beside the power plant, and you watch them from long boardwalks for free. There's a stingray touch tank, an observation tower, and it's one of the best free wildlife shows in Florida.","📍 6990 Dickman Rd, Apollo Beach · Free · Open Nov 1–Apr 15 (seasonal) · 10–15 min from Riverview","6990 Dickman Rd Apollo Beach FL"],
+    ["Tampa Riverwalk","Two and a half miles of waterfront path connecting parks, museums, playgrounds, and food halls along the Hillsborough River. Walk it, bike it, watch the boats — the whole downtown skyline unfolds as you go. Perfect early morning before the heat.","📍 Start at Curtis Hixon Park, 600 N Ashley Dr, Tampa · Free (parking is the only cost) · ~30 min","600 N Ashley Dr Tampa FL"],
+    ["Bayshore Boulevard","Walk a piece of the world's longest continuous sidewalk — 4.5 miles of balustrade along the open bay with mansions on one side and water on the other. Sunrise here is a Tampa rite of passage. Dolphins cruise by more often than you'd think.","📍 Park near 2900 Bayshore Blvd, Tampa (free street spots) · Free · ~30 min","2900 Bayshore Blvd Tampa FL"],
+    ["Ybor City Historic Stroll","Cuba, Spain, and Italy built this neighborhood on cigars — walk 7th Avenue past century-old social clubs, peek in the window of the 1905 Columbia Restaurant, read the history plaques, and meet the famous wild chickens that own the sidewalks. Free walking-tour maps at the visitor center.","📍 Start at Centro Ybor, 1600 E 8th Ave, Tampa · Free to wander · ~30 min","1600 E 8th Ave Tampa FL"],
+    ["Weedon Island Preserve","Boardwalks wind through mangrove tunnels to a lookout tower over Tampa Bay — and this is sacred ground: the Tocobaga people built shell mounds here a thousand years before any of our towns existed. The free cultural center tells their story beautifully.","📍 1800 Weedon Dr NE, St. Petersburg · Free · ~35 min","1800 Weedon Dr NE St Petersburg FL"],
+    ["Circle B Bar Reserve — Lakeland","Ask any Florida photographer: this old cattle ranch turned wetland is the best free wildlife show in the state. Gators sunning by the trail, bald eagles, sandhill cranes, spoonbills — bring water, go early, and walk Alligator Alley (yes, really). Kids never forget it.","📍 4399 Winter Lake Rd, Lakeland · Free · ~40 min","4399 Winter Lake Rd Lakeland FL"],
+    ["Florida Botanical Gardens — Largo","A hundred acres of tropical gardens, butterfly beds, and shaded walkways — completely free, quietly one of the best-kept secrets in the bay area. The wedding garden and majestic oaks are worth the drive alone; December brings a huge free light display.","📍 12520 Ulmerton Rd, Largo · Free · ~45 min","12520 Ulmerton Rd Largo FL"],
+    ["The Ringling — FREE Mondays","Sarasota's crown jewel: the circus king's bayfront estate with a world-class art museum that's free every Monday. Wander the courtyard's marble statues, the banyan-shaded grounds, and the outside of the Ca' d'Zan mansion on the bay. Feels like Europe, costs like a picnic.","📍 5401 Bay Shore Rd, Sarasota · Art museum free Mondays · ~55 min","5401 Bay Shore Rd Sarasota FL"],
+    ["Siesta Key Beach","Ninety-nine percent pure quartz sand that stays cool under bare feet even in July — regularly ranked the #1 beach in America, and it's free, parking included. Come Sunday evening for the drum circle at sunset; it's a Sarasota tradition.","📍 Siesta Beach, 948 Beach Rd, Sarasota · Free, free parking · ~55 min","948 Beach Rd Sarasota FL"],
+    ["St. Pete Pier & Central Ave Murals","The new pier juts a half-mile into the bay — free to walk, with gardens, a beach, and skyline views the whole way. Then cruise Central Avenue's blocks of giant murals, one of the best free outdoor art walks in the South.","📍 St. Pete Pier, 600 2nd Ave NE, St. Petersburg · Free (paid parking) · ~40 min","600 2nd Ave NE St Petersburg FL"],
+    ["Bradenton Riverwalk","A mile and a half of park along the Manatee River — splash pad for the grandkids, a skate park, fishing spots, and benches with a breeze. Pair it with the free South Florida Museum courtyard and you've got an easy, lovely afternoon.","📍 Riverwalk main entrance, 452 3rd Ave W, Bradenton · Free · ~35 min","452 3rd Ave W Bradenton FL"],
+    ["Plant City Train Viewing Platform","At the historic 1909 depot, a raised platform lets you watch real freight trains thunder through downtown — there's even a schedule board and radio feed of the engineers. The little railroad museum next door is free too. Kids and grandpas agree: this one's a sleeper hit.","📍 102 N Palmer St, Plant City · Free · ~25 min","102 N Palmer St Plant City FL"],
+    ["Alafia Scrub Nature Preserve — Riverview","Hiding right here at home: 80 acres of rare, ancient Florida scrub — one of the oldest ecosystems in the state — with quiet sandy trails above the Alafia River. Gopher tortoises, scrub jays if you're lucky, and hardly ever a crowd.","📍 9812 Balm Riverview Rd, Riverview · Free · You live here","9812 Balm Riverview Rd Riverview FL"],
+    ["Camp Bayou Outdoor Learning Center — Ruskin","A free nature center on the Little Manatee River with shaded trails, a butterfly garden, and fossil exhibits from our own Bone Valley. Saturday mornings often have free programs — a perfect low-key morning with kids.","📍 4140 24th St SE, Ruskin · Free (donations welcome) · 15–20 min","4140 24th St SE Ruskin FL"],
+    ["Ballast Point Park — Tampa","A long fishing pier pointing straight at the downtown skyline across the water — the single best free view of Tampa there is. Bring a rod or just a coffee at sunrise; there's a playground under the oaks for the little ones.","📍 5300 Interbay Blvd, Tampa · Free · ~35 min","5300 Interbay Blvd Tampa FL"],
+    ["Apollo Beach Nature Preserve","A little pocket of wild beach at the end of Apollo Beach with a walking trail, seabirds, and dead-on sunset views over the open bay — the locals' secret sunset spot. Small, simple, perfect for an evening walk.","📍 6760 Surfside Blvd, Apollo Beach · Free · 10–15 min","6760 Surfside Blvd Apollo Beach FL"]
+  ];
+  function dayIndex(){ var n=new Date(); return Math.floor((n - new Date(n.getFullYear(),0,0))/86400000); }
+  var pn = document.getElementById('sb-place');
+  var pt = document.getElementById('sb-placetext');
+  if(pn && pt){
+    var p = PLACES[dayIndex() % PLACES.length];
+    pn.textContent = p[0];
+    pt.innerHTML = p[1] + '<br><br><b style="color:#1a7fa8">' + p[2] + '</b>'
+      + '<br><a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(p[3]) + '" style="display:inline-block;margin-top:8px;background:#1a7fa8;color:#fff;font-weight:800;font-size:13.5px;text-decoration:none;padding:9px 18px;border-radius:999px">🧭 Get directions →</a>';
+  }
+})();
+</script>
+<script>
+(function(){
+  var d = new Date();
+  var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var el = document.getElementById('sb-date');
+  if(el) el.textContent = days[d.getDay()] + ' \u00b7 ' + months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+})();
+</script>
+</body>
+</html>
