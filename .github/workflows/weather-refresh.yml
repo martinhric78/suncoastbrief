@@ -1,0 +1,24 @@
+name: 4:30 AM weather refresh
+on:
+  schedule:
+    - cron: '30 8 * * *'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh weather with the freshest forecast
+        run: python build.py --weather-only
+      - name: Publish
+        run: |
+          git config user.name "suncoast-robot"
+          git config user.email "robot@suncoastbrief.com"
+          git add -A
+          git commit -m "4:30 AM weather refresh" || echo "no changes"
+          git push
