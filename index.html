@@ -2,6 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+(function(){
+  if(location.search.indexOf('welcome=1')>-1){
+    try{ localStorage.setItem('sb-reader','1'); }catch(e){}
+    if(window.self!==window.top){
+      try{ window.top.location.href='/?welcome=1'; }catch(e){}
+    }
+  }
+})();
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="manifest" href="/manifest.json">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
