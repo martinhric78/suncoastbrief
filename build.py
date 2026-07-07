@@ -73,19 +73,75 @@ def noaa_tides(date):
         parts.append(f"{label} {t.strftime('%-I:%M %p').lower()}")
     return " · ".join(parts)
 
-def news_items(max_items=4):
-    q = urllib.parse.quote('"Riverview FL" OR "Brandon FL" OR "Apollo Beach" OR "Ruskin FL" OR "Hillsborough County"')
-    xml = get(f"https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en")
+# The Suncoast Brief editorial rule: NO crime, arrests, accidents, or tragedy.
+# Any headline containing one of these words is silently skipped.
+BLOCKED_WORDS = [
+    "arrest", "shooting", "shoots", "shot", "gunman", "gunfire", "murder",
+    "homicide", "stabbing", "stabbed", "killed", "kills", "dies", "died",
+    "death", "dead", "fatal", "crash", "wreck", "collision", "crime",
+    "robbery", "robbed", "burglary", "theft", "stolen", "assault", "battery",
+    "rape", "sexual", "molest", "abuse", "deputies", "deputy", "sheriff",
+    "police", "officer-involved", "jail", "prison", "inmate", "sentenced",
+    "convicted", "charged", "suspect", "victim", "manhunt", "kidnap",
+    "missing person", "missing man", "missing woman", "missing child",
+    "overdose", "trafficking", "dui", "drunk driv", "hit-and-run",
+    "lawsuit", "sues", "sued", "fraud", "scam", "shooter", "drowned",
+    "drowning", "body found", "human remains", "amber alert",
+]
+
+def is_clean(title):
+    t = title.lower()
+    return not any(w in t for w in BLOCKED_WORDS)
+
+def _rss_titles(query):
+    """Fetch (title, link) pairs for one Google News query, cleaned + crime-filtered."""
+    q = urllib.parse.quote(query)
+    try:
+        xml = get(f"https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en")
+    except Exception as e:
+        print("  ! rss fail:", query[:40], e); return []
     root = ET.fromstring(xml)
-    items = []
+    out = []
     for it in root.iter("item"):
         title = (it.findtext("title") or "").strip()
         link = (it.findtext("link") or "").strip()
         if not title or not link: continue
-        title = re.sub(r"\s+-\s+[^-]+$", "", title)  # strip trailing "- Source"
+        title = re.sub(r"\s+-\s+[^-]+$", "", title)   # strip trailing "- Source"
+        if not is_clean(title): continue
         if len(title) > 110: title = title[:107] + "…"
-        items.append((title, link))
+        out.append((title, link))
+    return out
+
+# Searches run in priority order. Earlier groups win the top slots, so our
+# own backyard and "good news" (openings, events, improvements) come first;
+# broader Tampa Bay community news backfills the rest.
+NEWS_QUERIES = [
+    # --- Our backyard: openings & new businesses (highest priority) ---
+    '("Riverview FL" OR "Brandon FL" OR "Apollo Beach" OR "Ruskin FL" OR "Valrico" OR "FishHawk" OR "Wimauma" OR "Sun City Center") ("now open" OR "grand opening" OR "new business" OR "opening soon" OR "coming soon")',
+    # --- Our backyard: things to do & community improvements ---
+    '("Riverview FL" OR "Brandon FL" OR "Apollo Beach" OR "Ruskin FL" OR "Valrico" OR "SouthShore" OR "Sun City Center") (festival OR event OR park OR trail OR "ribbon cutting" OR expansion OR improvement)',
+    # --- Tampa / Hillsborough: openings & good news ---
+    '("Tampa" OR "Hillsborough County") ("now open" OR "grand opening" OR "new restaurant" OR "new business" OR "opening soon" OR expansion OR festival)',
+    # --- Broader bay community backfill (Plant City, Brandon, St. Pete, Bradenton) ---
+    '("Plant City" OR "Brandon FL" OR "St. Petersburg FL" OR "Bradenton") (community OR business OR park OR festival OR opening OR event)',
+    # --- Last-resort general local backfill ---
+    '"Hillsborough County" community',
+]
+
+def news_items(max_items=5):
+    """Pull good local + Tampa Bay news, priority-ordered, crime-filtered, de-duped."""
+    items, seen, per_query = [], set(), []
+    for q in NEWS_QUERIES:
+        found = _rss_titles(q)
+        per_query.append(len(found))
+        for title, link in found:
+            key = title.lower()[:60]
+            if key in seen: continue
+            seen.add(key)
+            items.append((title, link))
+            if len(items) >= max_items: break
         if len(items) >= max_items: break
+    print(f"  news: {len(items)} clean items chosen (per-query hits: {per_query})")
     return items
 
 def main():
@@ -131,6 +187,7 @@ def main():
         sr, ss = sun_times(*COAST, target)
         html = patch(html, "SUNRISE", sr)
         html = patch(html, "SUNSET", ss)
+        html = patch(html, "SUNSET2", ss)
         print(f"  sun ok: {sr} / {ss}")
     except Exception as e:
         print("  ! sun fetch failed:", e)
@@ -156,6 +213,14 @@ def main():
                     for t, l in items)
                 html = patch(html, "HEADLINES", "\n" + lis + "\n")
                 print(f"  headlines ok: {len(items)} items")
+            else:
+                # Quiet news day — never leave an ugly blank box.
+                filler = ('        <li>Quiet news day around the bay — a good excuse to '
+                          'get outside and enjoy the Suncoast. ☀️ Spotted something we '
+                          'should cover? <a href="mailto:tampasarasotahandyman@gmail.com'
+                          '?subject=News%20tip" style="color:#1a7fa8">Send us a tip</a>.</li>')
+                html = patch(html, "HEADLINES", "\n" + filler + "\n")
+                print("  headlines: none clean today, using friendly filler")
         except Exception as e:
             print("  ! headlines fetch failed, keeping previous:", e)
 
