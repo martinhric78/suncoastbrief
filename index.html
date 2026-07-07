@@ -741,15 +741,13 @@ function sbEnter(){
   else { document.body.classList.add('gated'); }
   // If they tap the subscribe button, remember them (they'll come back subscribed)
   // and swap the gate to the "welcome back" state so the door is open on return.
-  var b=document.getElementById('sb-gbtn');
-  if(b) b.addEventListener('click', function(){
-    try{ localStorage.setItem('sb-reader','1'); }catch(e){}
-    var s1=document.getElementById('sb-gate-1');
-    var s2=document.getElementById('sb-gate-2');
-    if(s1) s1.style.display='none';
-    if(s2) s2.style.display='block';
-  });
-})();
+  window.addEventListener('blur', function(){
+    var a=document.activeElement;
+    if(a && a.tagName==='IFRAME'){
+      var b=document.getElementById('sb-go');
+      if(b) b.style.display='block';
+    }
+  });})();
 </script>
 </body>
 </html>
