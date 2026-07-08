@@ -19,29 +19,28 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Commit draft to the tomorrow branch
-        run: |
-          git config user.name "suncoast-robot"
-          git config user.email "robot@suncoastbrief.com"
-          git checkout -B tomorrow origin/main
-          python build.py
-          git add -A
-          if git diff --cached --quiet; then
-            echo "NOCHANGES=1" >> "$GITHUB_ENV"
-            echo "No differences from main."
-          else
-            git commit -m "Tomorrow's Brief — auto-draft $(date +%F)"
-            git push -f origin tomorrow
-            echo "NOCHANGES=0" >> "$GITHUB_ENV"
-          fi
-
-      - name: Ensure an approval PR is open
-        if: env.NOCHANGES == '0'
+      - name: Build tomorrow's issue and open approval PR
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          git config user.name "suncoast-robot"
+          git config user.email "robot@suncoastbrief.com"
+
+          git checkout -B tomorrow origin/main
+          python build.py
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No differences from main — nothing to propose today. Skipping PR."
+            exit 0
+          fi
+
+          git commit -m "Tomorrow's Brief — auto-draft $(date +%F)"
+          git push -f origin tomorrow
+
           TITLE="🌅 Tomorrow's Brief — tap Merge to approve"
           BODY="Your robot built tomorrow's issue: fresh weather, tides, headlines, and rotated history/trivia. Review, then tap Merge to publish."
+
           NUM=$(gh pr list --base main --head tomorrow --state open --json number --jq '.[0].number' 2>/dev/null || echo "")
           if [ -n "$NUM" ]; then
             gh pr edit "$NUM" --title "$TITLE" --body "$BODY" || true
