@@ -297,6 +297,9 @@ def build_ticker(items):
 
 
 def news_items(max_items=8):
+    return []  # News is now 100% hand-written by Martin. Robot does not post news.
+
+def _news_items_DISABLED(max_items=8):
     """Pull good local + Tampa Bay news, priority-ordered, crime-filtered, de-duped."""
     items, seen, per_query = [], set(), []
     for q in NEWS_QUERIES:
