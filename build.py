@@ -87,6 +87,9 @@ BLOCKED_WORDS = [
     "overdose", "trafficking", "dui", "drunk driv", "hit-and-run",
     "lawsuit", "sues", "sued", "fraud", "scam", "shooter", "drowned",
     "drowning", "body found", "human remains", "amber alert",
+    # Off-brand for a good-news retiree-area paper:
+    "dispensary", "dispensaries", "cannabis", "marijuana", "thc", "cbd",
+    "weed", "trulieve", "rise dispensary", "muv", "sunnyside", "curaleaf",
 ]
 
 def is_clean(title):
