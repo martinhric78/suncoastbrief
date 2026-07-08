@@ -128,7 +128,78 @@ NEWS_QUERIES = [
     '"Hillsborough County" community',
 ]
 
-def news_items(max_items=5):
+
+SOUTH_WORDS = ["riverview", "apollo beach", "ruskin", "sun city", "wimauma", "gibsonton", "southshore", "south shore", "fishhawk"]
+BRANDON_WORDS = ["brandon", "valrico", "bloomingdale", "seffner", "lithia", "plant city"]
+
+def community_for(title):
+    t = title.lower()
+    for w in SOUTH_WORDS:
+        if w in t: return ("south", w.title())
+    for w in BRANDON_WORDS:
+        if w in t: return ("brandon", w.title())
+    return ("any", "Tampa Bay")
+
+def emoji_for(title):
+    t = title.lower()
+    pairs = [("restaurant","🍽️"),("food","🍽️"),("brewery","🍺"),("coffee","☕"),("bakery","🥐"),
+             ("burger","🍔"),("pizza","🍕"),("taco","🌮"),("open","🎉"),("opening","🎉"),
+             ("festival","🎪"),("event","📅"),("market","🧺"),("park","🌳"),("trail","🥾"),
+             ("school","🏫"),("library","📚"),("beach","🏖️"),("fish","🎣"),("business","🏪"),
+             ("shop","🛍️"),("store","🛍️"),("expansion","📈"),("award","🏅"),("best","🏅"),
+             ("ribbon","✂️"),("home","🏡"),("hospital","🏥"),("road","🛣️")]
+    for k, e in pairs:
+        if k in t: return e
+    return "📰"
+
+FILLER_CARDS = [
+    ("🐋","Suncoast staple","Manatees at the Big Bend boardwalk",
+     "In the cool months the TECO Manatee Viewing Center in Apollo Beach fills with hundreds of manatees — free, and one of the best wildlife shows in Florida."),
+    ("🧺","Suncoast staple","Ybor City Saturday Market",
+     "Local makers, produce, live music, and the famous free-roaming chickens — a Saturday-morning institution at Centennial Park."),
+    ("🎣","Suncoast staple","The Alafia is calling",
+     "Snook along the mangroves, redfish on the flats — the river that named this region is minutes from your door."),
+    ("🍓","Suncoast staple","Plant City, winter strawberry capital",
+     "Most of America's winter strawberries grow just up the road — shortcake stands run nearly year-round."),
+]
+
+def card_html(emoji, tag, title, body):
+    return (f'<div class="ic">{emoji}</div>\n'
+            f'        <div><span class="tag">{tag}</span>\n'
+            f'        <h3>{title}</h3>\n'
+            f'        <p>{body}</p></div>')
+
+def build_cards(items):
+    """Route clean news items into 4 cards: 1-2 Brandon area, 3-4 South Shore.
+    Items that match neither fill remaining slots. Evergreen fillers cover shortage."""
+    brandon, south, anywhere = [], [], []
+    for t, l in items:
+        zone, place = community_for(t)
+        entry = (t, l, place)
+        (brandon if zone == "brandon" else south if zone == "south" else anywhere).append(entry)
+    def take(pool):
+        return pool.pop(0) if pool else (anywhere.pop(0) if anywhere else None)
+    slots = [take(brandon), take(brandon), take(south), take(south)]
+    cards, fi = [], 0
+    for i, s in enumerate(slots):
+        if s:
+            t, l, place = s
+            tag = f"{place} · Local News"
+            body = f'Reported in local news overnight. <a href="{l}" style="color:#1a7fa8">Read the full story</a>.'
+            cards.append(card_html(emoji_for(t), tag, t, body))
+        else:
+            e, tg, ti, bo = FILLER_CARDS[fi % len(FILLER_CARDS)]; fi += 1
+            cards.append(card_html(e, tg, ti, bo))
+    return cards
+
+def build_ticker(items):
+    spans = "".join(f"<span>{emoji_for(t)} {t}</span>" for t, _ in items[:5])
+    if not spans:
+        spans = "<span>🌅 Quiet news day on the Suncoast — enjoy it</span>"
+    return spans + spans  # doubled so the CSS scroll loop is seamless
+
+
+def news_items(max_items=8):
     """Pull good local + Tampa Bay news, priority-ordered, crime-filtered, de-duped."""
     items, seen, per_query = [], set(), []
     for q in NEWS_QUERIES:
@@ -212,7 +283,11 @@ def main():
                     f'        <li>{t} <a href="{l}" style="color:#1a7fa8">source</a></li>'
                     for t, l in items)
                 html = patch(html, "HEADLINES", "\n" + lis + "\n")
-                print(f"  headlines ok: {len(items)} items")
+                cards = build_cards(items)
+                for i, c in enumerate(cards, 1):
+                    html = patch(html, f"CARD{i}", c)
+                html = patch(html, "TICKER", build_ticker(items))
+                print(f"  headlines ok: {len(items)} items; 4 cards + ticker patched")
             else:
                 # Quiet news day — never leave an ugly blank box.
                 filler = ('        <li>Quiet news day around the bay — a good excuse to '
@@ -220,7 +295,11 @@ def main():
                           'should cover? <a href="mailto:tampasarasotahandyman@gmail.com'
                           '?subject=News%20tip" style="color:#1a7fa8">Send us a tip</a>.</li>')
                 html = patch(html, "HEADLINES", "\n" + filler + "\n")
-                print("  headlines: none clean today, using friendly filler")
+                cards = build_cards([])
+                for i, c in enumerate(cards, 1):
+                    html = patch(html, f"CARD{i}", c)
+                html = patch(html, "TICKER", build_ticker([]))
+                print("  headlines: none clean today, evergreen cards + filler used")
         except Exception as e:
             print("  ! headlines fetch failed, keeping previous:", e)
 
