@@ -92,8 +92,26 @@ BLOCKED_WORDS = [
     "weed", "trulieve", "rise dispensary", "muv", "sunnyside", "curaleaf",
 ]
 
+# Holiday stories only make sense in season. (term -> allowed months)
+SEASONAL_TERMS = {
+    "hanukkah": (11, 12), "chanukah": (11, 12),
+    "christmas": (11, 12), "thanksgiving": (10, 11),
+    "halloween": (9, 10), "trick-or-treat": (9, 10),
+    "easter": (3, 4), "new year": (12, 1), "valentine": (1, 2),
+}
+
+def in_season(title):
+    import datetime
+    t = title.lower()
+    m = datetime.date.today().month
+    for term, months in SEASONAL_TERMS.items():
+        if term in t and m not in months:
+            return False
+    return True
+
 def is_clean(title):
     t = title.lower()
+    if not in_season(title): return False
     return not any(w in t for w in BLOCKED_WORDS)
 
 def _rss_titles(query):
@@ -166,6 +184,82 @@ FILLER_CARDS = [
      "Most of America's winter strawberries grow just up the road — shortcake stands run nearly year-round."),
 ]
 
+
+# --- The Suncoast voice: warm takes by story type. Adds voice, never facts. ---
+TAKES = {
+  "food": [
+    "Another reason to skip dessert at home — welcome to the neighborhood. 🎉",
+    "The Suncoast food scene keeps getting tastier. See you in line.",
+    "New flavors close to home — that's our kind of headline.",
+    "Support them early, tip well, and report back on what's good.",
+    "One more excuse for a family night out. We'll allow it.",
+    "First visits make or break a new spot — go say hello, neighbors.",
+  ],
+  "health": [
+    "Good medicine closer to home is always good news for the Suncoast.",
+    "Shorter drives for care — that matters out here, and we're glad to see it.",
+    "More care, closer by. That's a win for every family on this side of the bay.",
+    "Health care coming to us instead of the other way around — welcome.",
+  ],
+  "school": [
+    "Good things for local kids are the best kind of news we get to print.",
+    "Investing in the next generation of Suncoast neighbors — love to see it.",
+    "Every new door for local students is worth celebrating.",
+  ],
+  "shop": [
+    "New doors opening close to home — go be a good first customer.",
+    "The neighborhood keeps growing. Welcome to the Suncoast.",
+    "Shopping closer to home means more time on the water. We approve.",
+    "Another storefront filled — that's a healthy sign for our corner of the bay.",
+  ],
+  "outdoors": [
+    "More reasons to get outside — as if the Suncoast needed any.",
+    "Green space is the best kind of development. See you out there.",
+    "Grab the sunscreen — this one's worth a visit.",
+  ],
+  "event": [
+    "Mark the calendar and bring a neighbor — this is what community looks like.",
+    "The kind of weekend plans we like to hand you. Enjoy it.",
+    "Local calendars just got a little fuller. Go make a morning of it.",
+  ],
+  "any": [
+    "Good news from our own backyard — the kind we're here for.",
+    "The Suncoast keeps growing in the right direction.",
+    "Another bright spot from around the bay this morning.",
+    "Neighbors doing good things — our favorite genre.",
+  ],
+}
+
+CATEGORY_WORDS = [
+  ("food", ["restaurant","custard","ice cream","bakery","coffee","cafe","pizza","taco","burger","brewery","bar ","grill","kitchen","food","donut","deli","bbq","seafood"]),
+  ("health", ["health","hospital","clinic","medical","care opens","outpatient","pediatric","wellness","urgent care"]),
+  ("school", ["school","students","education","learning","classroom","scholarship","teacher"]),
+  ("outdoors", ["park","trail","preserve","boardwalk","beach","garden","playground","nature"]),
+  ("event", ["festival","event","concert","market","fair","celebration","parade"]),
+  ("shop", ["store","shop","walmart","opens","open","grand opening","location","retail","expansion","expands"]),
+]
+
+def category_for(title):
+    t = title.lower()
+    for cat, words in CATEGORY_WORDS:
+        if any(w in t for w in words):
+            return cat
+    return "any"
+
+_used_takes = set()
+
+def take_for(title):
+    cat = category_for(title)
+    bank = TAKES.get(cat, TAKES["any"])
+    i = sum(ord(c) for c in title) % len(bank)
+    # never repeat the same line twice on one page
+    for _ in range(len(bank)):
+        if bank[i] not in _used_takes:
+            _used_takes.add(bank[i])
+            return bank[i]
+        i = (i + 1) % len(bank)
+    return bank[i]  # bank exhausted (5+ same-category stories) — allow repeat
+
 def card_html(emoji, tag, title, body):
     return (f'<div class="ic">{emoji}</div>\n'
             f'        <div><span class="tag">{tag}</span>\n'
@@ -188,7 +282,7 @@ def build_cards(items):
         if s:
             t, l, place = s
             tag = f"{place} · Local News"
-            body = f'Reported in local news overnight. <a href="{l}" style="color:#1a7fa8">Read the full story</a>.'
+            body = f'{take_for(t)} <a href="{l}" style="color:#8a9aa5;font-size:12px">via local news ↗</a>'
             cards.append(card_html(emoji_for(t), tag, t, body))
         else:
             e, tg, ti, bo = FILLER_CARDS[fi % len(FILLER_CARDS)]; fi += 1
@@ -283,13 +377,9 @@ def main():
             items = news_items()
             if items:
                 lis = "\n".join(
-                    f'        <li>{t} <a href="{l}" style="color:#1a7fa8">source</a></li>'
-                    for t, l in items)
+                    f'        <li>{t}</li>'
+                    for t, l in items[:5])
                 html = patch(html, "HEADLINES", "\n" + lis + "\n")
-                cards = build_cards(items)
-                for i, c in enumerate(cards, 1):
-                    html = patch(html, f"CARD{i}", c)
-                html = patch(html, "TICKER", build_ticker(items))
                 print(f"  headlines ok: {len(items)} items; 4 cards + ticker patched")
             else:
                 # Quiet news day — never leave an ugly blank box.
@@ -298,10 +388,6 @@ def main():
                           'should cover? <a href="mailto:tampasarasotahandyman@gmail.com'
                           '?subject=News%20tip" style="color:#1a7fa8">Send us a tip</a>.</li>')
                 html = patch(html, "HEADLINES", "\n" + filler + "\n")
-                cards = build_cards([])
-                for i, c in enumerate(cards, 1):
-                    html = patch(html, f"CARD{i}", c)
-                html = patch(html, "TICKER", build_ticker([]))
                 print("  headlines: none clean today, evergreen cards + filler used")
         except Exception as e:
             print("  ! headlines fetch failed, keeping previous:", e)
