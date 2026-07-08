@@ -2,6 +2,7 @@ name: Nightly draft — tomorrow's Brief
 on:
   schedule:
     - cron: '45 0 * * *'
+    - cron: '30 1 * * *'
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -11,19 +12,39 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build tomorrow's issue
-        run: python build.py
-      - name: Open approval PR
-        env:
-          GH_TOKEN: ${{ github.token }}
+
+      - name: Commit draft to the tomorrow branch
         run: |
           git config user.name "suncoast-robot"
           git config user.email "robot@suncoastbrief.com"
-          git checkout -B tomorrow
+          git checkout -B tomorrow origin/main
+          python build.py
           git add -A
-          git commit -m "Tomorrow's Brief — auto-draft $(date +%F)" || echo "no changes"
-          git push -f origin tomorrow
-          gh pr create --base main --head tomorrow --title "🌅 Tomorrow's Brief — tap Merge to approve" --body "Your robot built tomorrow's issue: fresh weather, tides, and headlines. Review, then tap Merge to publish." || gh pr edit tomorrow --title "🌅 Tomorrow's Brief — tap Merge to approve" || true
+          if git diff --cached --quiet; then
+            echo "NOCHANGES=1" >> "$GITHUB_ENV"
+            echo "No differences from main."
+          else
+            git commit -m "Tomorrow's Brief — auto-draft $(date +%F)"
+            git push -f origin tomorrow
+            echo "NOCHANGES=0" >> "$GITHUB_ENV"
+          fi
+
+      - name: Ensure an approval PR is open
+        if: env.NOCHANGES == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="🌅 Tomorrow's Brief — tap Merge to approve"
+          BODY="Your robot built tomorrow's issue: fresh weather, tides, headlines, and rotated history/trivia. Review, then tap Merge to publish."
+          NUM=$(gh pr list --base main --head tomorrow --state open --json number --jq '.[0].number' 2>/dev/null || echo "")
+          if [ -n "$NUM" ]; then
+            gh pr edit "$NUM" --title "$TITLE" --body "$BODY" || true
+          else
+            gh pr create --base main --head tomorrow --title "$TITLE" --body "$BODY"
+          fi
