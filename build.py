@@ -343,12 +343,6 @@ def main():
         else:
             note = f"<b>The take:</b> A pleasant Suncoast day, highs around {hot}°. Get outside and enjoy it."
         html = patch(html, "WXNOTE", note)
-        if hot >= 95 or rain >= 80:
-            alert = ("Heat advisory conditions — hydrate and check on older neighbors." if hot >= 95
-                     else "Strong storms likely today — secure loose patio items and drive with care.")
-        else:
-            alert = "Good morning! No weather alerts today — it's a beautiful day on the Suncoast. ☀️"
-        html = patch(html, "ALERT", alert)
         print(f"  weather ok: coast {c_t}° / inland {i_t}° / rain {rain}%")
     except Exception as e:
         print("  ! weather fetch failed, keeping previous:", e)
@@ -358,7 +352,6 @@ def main():
         sr, ss = sun_times(*COAST, target)
         html = patch(html, "SUNRISE", sr)
         html = patch(html, "SUNSET", ss)
-        html = patch(html, "SUNSET2", ss)
         print(f"  sun ok: {sr} / {ss}")
     except Exception as e:
         print("  ! sun fetch failed:", e)
