@@ -761,13 +761,24 @@ function sbEnter(){
 })();
 </script>
 <script src="stories.js?v=1"></script>
+<script src="evergreen.js?v=1"></script>
 <script>
 (function(){
   var box = document.getElementById('sb-stories');
   if(!box) return;
-  var s = (window.SUNCOAST_STORIES || []);
-  if(!s.length){ box.innerHTML = '<div class="story"><div><span class="tag">Suncoast</span><h3>Fresh stories in the morning</h3><p>Today\'s local stories are being written. Check back soon.</p></div></div>'; return; }
-  box.innerHTML = s.map(function(st){
+  var news = (window.SUNCOAST_STORIES || []);
+  var ever = (window.EVERGREEN || []);
+  // Rotate evergreen by day-of-year so the mix changes daily.
+  var n = new Date();
+  var di = Math.floor((n - new Date(n.getFullYear(),0,0))/86400000);
+  // Aim for ~6 total items on the page: all news, then fill with evergreen.
+  var TARGET = 6;
+  var need = Math.max(0, TARGET - news.length);
+  var picks = [];
+  for(var i=0;i<need && ever.length;i++){ picks.push(ever[(di*3 + i) % ever.length]); }
+  var all = news.concat(picks);
+  if(!all.length){ box.innerHTML=''; return; }
+  box.innerHTML = all.map(function(st){
     var tag = st.tag ? '<span class="tag">'+st.tag+'</span>' : '';
     var body = (st.body||'').split('\n').filter(Boolean).map(function(p){return '<p>'+p+'</p>';}).join('');
     return '<div class="story"><div>'+tag+'<h3>'+st.title+'</h3>'+body+'</div></div>';
