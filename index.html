@@ -739,8 +739,16 @@ function sbEnter(){
   // and unlocks the gate automatically — no button, no guessing needed.
 })();
 </script>
-<script src="stories.js?v=1"></script>
-<script src="evergreen.js?v=1"></script>
+<script>
+// Cache-buster: changes hourly so readers always get the newest edition
+// instead of a stale cached copy of stories.js / evergreen.js.
+(function(){
+  var d = new Date();
+  var stamp = '' + d.getFullYear() + (d.getMonth()+1) + d.getDate() + d.getHours();
+  document.write('<script src="stories.js?v=' + stamp + '"><\/script>');
+  document.write('<script src="evergreen.js?v=' + stamp + '"><\/script>');
+})();
+</script>
 <script>
 (function(){
   var box = document.getElementById('sb-stories');
