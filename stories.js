@@ -1,39 +1,37 @@
 /* ===================================================================
    THE SUNCOAST BRIEF — TODAY'S STORIES
-   Replace everything between the [ ] with the day's stories.
-   Each: { tag: "...", title: "...", body: "para one.\npara two." }
 =================================================================== */
 
 window.SUNCOAST_STORIES = [
 
   {
+    tag: "Today · Stay cool",
+    title: "Heat advisory today — take it easy out there",
+    body: "The county's under a heat advisory again today, so treat the middle of the day with respect. Do the yard work, the walk, the fishing early — before 11 if you can — and save the afternoon for the shade.\nThe usual drill: water in hand, hat on, check on the older folks and the pets, and never leave anyone in a parked car for even a minute. It's the kind of heat that sneaks up on you."
+  },
+
+  {
     tag: "This weekend · Worth it",
-    title: "The rodeo's coming to the county fairgrounds Friday and Saturday",
-    body: "Bull riding, bronco busting, barrel racing — the Tampa Bay Rodeo & Family Festival rolls into the Hillsborough County Fairgrounds this Friday and Saturday, the 17th and 18th. Gates at 5, rodeo starts at 7:30, rain or shine.\nCome early for the family festival: BBQ, corn dogs, Cuban sandwiches, and a 150-foot American flag flying over the whole thing. It's about as Florida as a weekend gets, and it's right in our backyard."
+    title: "Rodeo and a shark expo, same weekend",
+    body: "Two big ones this weekend, both close. The Tampa Bay Rodeo & Family Festival runs Friday and Saturday at the Hillsborough County Fairgrounds in Dover — bull rides, beer, free games, 7:30 start, tickets from $45 at 215 Sydney Washer Road.\nAnd if the kids are more into fins than cowboys, SharkCon takes over the state fairgrounds the same two days — touch tanks, shark experts, live mermaids, and a 27-foot shark slide. Something for every kind of family."
   },
 
   {
-    tag: "Riverview · Heads up",
-    title: "Friday's storms put a tree through a roof — worth a look at your own",
-    body: "Those storms Friday evening came through hard, and one of them dropped a big tree onto a Riverview home. Nobody plans for that, but you can shave the odds.\nTake ten minutes this week and walk your yard. Dead limbs over the roof, trees leaning the wrong way, anything hanging over where you park. A trim costs a lot less than a roof does — and we've got a whole lot of storm season still ahead of us."
+    tag: "Plant City · Cheap & pretty",
+    title: "The Keel Farms flowers are still worth a morning",
+    body: "If you missed it last weekend, you can still go pick your own bouquet out at Keel Farms in Plant City — build-your-own flowers, plus the farm's food and cold drinks.\nGo early before the heat sets in (see above). An hour in the flowers and a bouquet for the kitchen table is a cheap kind of happy."
   },
 
   {
-    tag: "Hillsborough · Good to know",
-    title: "You can look up exactly what's in your tap water",
-    body: "The county just put out its annual water quality reports, and there's an easy way to find yours: go to HCFL.gov/WaterQualityReport, punch in your address, and it pulls up the report for your system.\nSome numbers behind your faucet — the county runs 11 different water systems, pumps 78 million gallons a day, and ran more than 31,000 tests on it last year. Worth two minutes if you've ever wondered."
+    tag: "Tampa · Good to know",
+    title: "The Rays gave the first look inside their proposed new ballpark",
+    body: "The Rays just pulled back the curtain on the first real look inside their proposed new ballpark in Tampa. The pictures are out, folks are talking — though the bigger stadium deal still isn't fully done.\nWhether you bleed Rays blue or just care what gets built on this side of the bay, it's worth a look at what they've got planned."
   },
 
   {
-    tag: "Tampa · Tonight",
-    title: "The Shriners parade takes over 7th Avenue tonight",
-    body: "If you're headed into Ybor this evening, know that 7th Avenue belongs to the Shriners — they're holding their Imperial Parade tonight from 7 to 8 as part of their big national gathering here in Tampa.\nGood fun if you want to watch, a headache if you're just trying to park. Either way, plan around it."
-  },
-
-  {
-    tag: "Tampa · Worth the drive",
-    title: "A new exhibit on Florida's part in the Revolution",
-    body: "Here's one for the history-minded: the Tampa Bay History Center downtown has opened a new exhibit on Florida's odd role in the American Revolution — back when we were British East and West Florida, and not exactly on the rebels' side.\nIt runs through November 29, so no rush. But it's the kind of thing that makes you look at this place a little differently."
+    tag: "Boyette Road · Heads up",
+    title: "The pipeline work is still shifting east",
+    body: "Quick reminder for the commute: the water-pipeline crews are working east toward FishHawk Boulevard, with lanes squeezed near Bell Creek Academy through Bell Shoals.\nLeave a few minutes early, watch for the flaggers, and don't count on that stretch running smooth for a while yet."
   }
 
 ];
