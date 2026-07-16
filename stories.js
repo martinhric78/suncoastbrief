@@ -5,33 +5,33 @@
 window.SUNCOAST_STORIES = [
 
   {
-    tag: "Today · Stay cool",
-    title: "Heat advisory today — take it easy out there",
-    body: "The county's under a heat advisory again today, so treat the middle of the day with respect. Do the yard work, the walk, the fishing early — before 11 if you can — and save the afternoon for the shade.\nThe usual drill: water in hand, hat on, check on the older folks and the pets, and never leave anyone in a parked car for even a minute. It's the kind of heat that sneaks up on you."
+    tag: "Weather · Keep an eye out",
+    title: "Forecasters are watching the Gulf — rain chances up this weekend",
+    body: "Nothing to panic about, but worth knowing: the National Hurricane Center is watching a tropical disturbance in the northeastern Gulf that could push heavy rain and some flooding risk into Florida starting Saturday. There's a second system way out by Africa they're tracking too.\nNo storm headed our way as of now — just a wetter weekend shaping up. Good time to do the simple stuff: clear the gutters, know where the flashlight is, and don't drive through standing water if the roads flood. We'll keep you posted."
   },
 
   {
     tag: "This weekend · Worth it",
-    title: "Rodeo and a shark expo, same weekend",
-    body: "Two big ones this weekend, both close. The Tampa Bay Rodeo & Family Festival runs Friday and Saturday at the Hillsborough County Fairgrounds in Dover — bull rides, beer, free games, 7:30 start, tickets from $45 at 215 Sydney Washer Road.\nAnd if the kids are more into fins than cowboys, SharkCon takes over the state fairgrounds the same two days — touch tanks, shark experts, live mermaids, and a 27-foot shark slide. Something for every kind of family."
+    title: "Rodeo and a shark expo, same two days",
+    body: "Two big ones this weekend, both close. The Tampa Bay Rodeo & Family Festival runs Friday and Saturday at the Hillsborough County Fairgrounds in Dover — bull rides, beer, free games, 7:30 start, tickets from $45 at 215 Sydney Washer Road.\nAnd if your kids are more fins than cowboys, SharkCon takes over the state fairgrounds the same two days — touch tanks, shark experts, and a 27-foot shark slide. Rain may factor in (see above), so check before you load up the car."
   },
 
   {
-    tag: "Plant City · Cheap & pretty",
-    title: "The Keel Farms flowers are still worth a morning",
-    body: "If you missed it last weekend, you can still go pick your own bouquet out at Keel Farms in Plant City — build-your-own flowers, plus the farm's food and cold drinks.\nGo early before the heat sets in (see above). An hour in the flowers and a bouquet for the kitchen table is a cheap kind of happy."
+    tag: "Busch Gardens · Last call",
+    title: "Say goodbye to Kumba — the old coaster takes its final ride next month",
+    body: "If you grew up screaming down Kumba, you've got a few weeks left. Busch Gardens announced the award-winning coaster will take its final ride next month before it's reborn as 'Kumba's Revenge.'\nThree decades of that big blue loop over the treetops. If it's part of your family's history, might be worth one last ride before it's gone."
   },
 
   {
-    tag: "Tampa · Good to know",
-    title: "The Rays gave the first look inside their proposed new ballpark",
-    body: "The Rays just pulled back the curtain on the first real look inside their proposed new ballpark in Tampa. The pictures are out, folks are talking — though the bigger stadium deal still isn't fully done.\nWhether you bleed Rays blue or just care what gets built on this side of the bay, it's worth a look at what they've got planned."
+    tag: "Odessa · Good news",
+    title: "The farm stand that gives seniors free groceries every month",
+    body: "Worth knowing about: the Keystone Farmers Market, a little roadside place going since 1978, has new owners who once a month hand out free baskets of produce and groceries to local seniors. No catch — they just figure that's what a neighborhood market should do.\nFresh produce, farm eggs, legendary boiled peanuts, and cows the grandkids can feed out back. It's at 12615 Tarpon Springs Road in Odessa, open daily from 8."
   },
 
   {
     tag: "Boyette Road · Heads up",
     title: "The pipeline work is still shifting east",
-    body: "Quick reminder for the commute: the water-pipeline crews are working east toward FishHawk Boulevard, with lanes squeezed near Bell Creek Academy through Bell Shoals.\nLeave a few minutes early, watch for the flaggers, and don't count on that stretch running smooth for a while yet."
+    body: "Quick reminder for the commute: the water-pipeline crews are working east toward FishHawk Boulevard, with lanes squeezed near Bell Creek Academy through Bell Shoals.\nLeave a few minutes early, watch for the flaggers, and don't count on that stretch running smooth for a while yet — especially if the rain moves in this weekend."
   }
 
 ];
