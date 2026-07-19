@@ -1,49 +1,49 @@
 /* ===================================================================
-   THE SUNCOAST BRIEF — TODAY'S STORIES
+   THE SUNCOAST BRIEF — SUNDAY, JULY 19
 =================================================================== */
 
 window.SUNCOAST_STORIES = [
 
   {
+    tag: "Weather · Today",
+    title: "Today's the wettest day of the week — here's what's coming",
+    body: "The upper-level low sitting off our coast in the Gulf is easing north, and as of early Saturday forecasters still saw no sign of a closed circulation. Good news on that front. The rain is another story.\\nThe Tampa Bay area is looking at 6 to 8 inches of rain over the next seven days, and the heaviest of it lands today. Odds of the system becoming a named storm are still low — near zero over the next two days, about 20 percent over seven.\\nSo nothing to panic about. But plan around it. Don't drive through standing water, because you can't see how deep it is and it doesn't take much to float a car. If your yard holds water, move anything off the ground now. And if you've been putting off clearing the gutters, today's the day you find out."
+  },
+
+  {
     tag: "Your wallet · Starts tomorrow",
-    title: "Tax-free shopping opens Monday — and it runs a full month this year",
-    body: "Florida's back-to-school sales tax holiday starts Monday, July 20, and this time it runs all the way through Thursday, August 20. The Legislature moved the window up from August so families can shop before the first bell instead of during it. What started years ago as a three-day weekend is now a solid month.\\nHere's what's covered: clothing, shoes, wallets, bags, backpacks and diaper bags at $100 or less per item. School supplies at $50 or less. Learning aids and jigsaw puzzles at $30 or less. Computers and computer accessories at $1,500 or less for home use. Cell phones, game consoles and anything bought for a business don't count.\\nBetween the 6 percent state tax and the county surtax, a $300 back-to-school run saves you around twenty bucks. The full item list is at floridarevenue.com."
+    title: "Tax-free shopping opens tomorrow and runs a full month",
+    body: "Florida's back-to-school sales tax holiday starts Monday, July 20, and runs through Thursday, August 20. The Legislature moved the window up so families can shop before school starts instead of during it. What used to be a three-day weekend is now a solid month.\\nCovered: clothing, shoes, wallets, bags, backpacks and diaper bags at $100 or less per item. School supplies at $50 or less. Learning aids and puzzles at $30 or less. Computers and accessories at $1,500 or less for home use.\\nNot covered: cell phones, video game consoles, and anything bought for a business.\\nThe $100 cap is per item, not per cart — a $95 pair of shoes and a $90 backpack are both tax-free in the same trip. Full list is at floridarevenue.com.\\nSo whatever you were about to buy today, it's worth waiting one more day."
   },
 
   {
     tag: "Mark the calendar",
-    title: "School starts August 10",
-    body: "Hillsborough County students head back Monday, August 10, and the year runs through Friday, May 28. Teachers are back the week before.\\nThat gives you three full weeks of tax-free shopping between now and day one — no need to fight the crowd the first weekend."
+    title: "School's back August 10",
+    body: "Hillsborough County students return Monday, August 10, with the year running through Friday, May 28. Teachers are back the week prior.\\nThat's three full weeks of tax-free shopping between tomorrow and the first bell. No reason to fight the crowd on opening day."
   },
 
   {
-    tag: "Ruskin · Free and worth it",
-    title: "Free school supplies, a fossil pit, and a morning outside",
-    body: "Camp Bayou Outdoor Learning Center hosts its 18th annual Back to School – Back to Nature morning on Saturday, August 1, from 9 to noon at 4140 24th Street SE in Ruskin. Admission and parking are free and you don't need a reservation.\\nKids go table to table for hands-on nature activities and pick up free school supplies as they go. Every child gets a raffle ticket, with drawings every half hour for backpacks, lunch bags and journals — you have to be there to win. This year's tables include the Paleo Preserve Fossil Museum, Sam's Honeybees, the SouthShore Regional Library, Little Manatee River State Park, the Manatee Viewing Center and the Florida Aquarium.\\nFree cart tours run all morning. The fossil museum will be open, where kids can learn about the saber-tooth cats, mastodons and giant sloths that walked this same ground a million-odd years ago. Five dollars gets them into the stocked dig pit, and they keep whatever they pull out. Details at campbayou.org or 813-641-8545."
+    tag: "Ruskin · Free",
+    title: "Free school supplies and a fossil dig, August 1",
+    body: "Camp Bayou Outdoor Learning Center holds its 18th annual Back to School – Back to Nature morning on Saturday, August 1, from 9 to noon at 4140 24th Street SE in Ruskin. Admission and parking are free, no reservation needed.\\nKids move table to table for hands-on nature activities and pick up free school supplies along the way. Every child gets a raffle ticket, with drawings every half hour for backpacks, lunch bags and journals — you have to be there to win. This year's tables include the Paleo Preserve Fossil Museum, Sam's Honeybees, the SouthShore Regional Library, Little Manatee River State Park, the Manatee Viewing Center and the Florida Aquarium.\\nFree cart tours run all morning, and the fossil museum will be open — saber-tooth cats, mastodons and giant sloths all walked this same ground. Five dollars gets a kid into the stocked dig pit, and they keep whatever they pull out. campbayou.org or 813-641-8545."
   },
 
   {
-    tag: "Busch Gardens · Last call",
-    title: "Kumba takes its final roar on August 2",
-    body: "It's official now, with a date attached. Busch Gardens announced Tuesday that Kumba is retiring after 33 years, and riders have until Sunday, August 2, to take one last spin. Pass members get an exclusive window Saturday, August 1, from 8 to 11 a.m.\\nThe ride drops you 135 feet, hits 60 miles an hour and runs seven inversions in under three minutes. When it opened in 1993 it was the tallest, fastest and longest coaster in Florida, with the tallest vertical loop in the world.\\nWhat comes next is called Kumba's Revenge — the park describes it as an extension of the existing coaster, part of a $100 million-plus investment. Details are still under wraps until later this year. If you've been meaning to put a kid on Kumba, the clock is running."
+    tag: "Busch Gardens · Two weeks left",
+    title: "Kumba's last ride is August 2",
+    body: "Busch Gardens confirmed this week that Kumba is retiring after 33 years, with the final rides on Sunday, August 2. Pass members get an exclusive window the morning before, Saturday, August 1, from 8 to 11.\\nThe ride drops 135 feet, hits 60 miles an hour and runs seven inversions in under three minutes. When it opened in 1993 it was the tallest, fastest and longest coaster in Florida, with the tallest vertical loop in the world.\\nWhat replaces it is called Kumba's Revenge — the park describes it as an extension of the existing coaster, part of a $100 million-plus investment. Details come later this year. If there's a kid in your house who's been waiting to be tall enough, the clock is running."
   },
 
   {
     tag: "Riverview · Coming soon",
-    title: "Ford's Garage is going up on 301, opening in December",
-    body: "Crews are building a roughly 7,000-square-foot Ford's Garage at the northwest corner of U.S. 301 and Alder Green Drive, with a December opening planned. It'll be the 24th in Florida and the fifth in the Tampa Bay area.\\nThe company says management hiring and training usually starts about six months before opening, with another 125 to 150 people brought on six to eight weeks out, settling around 100 to 110 once the opening rush calms down. That's real jobs, close to home.\\nIf you want a preview, the Brandon location at 11105 Causeway Blvd. tells you what's coming — burgers, craft beer, a Model T parked out front and gas-pump beer taps inside."
+    title: "Ford's Garage is going up on 301",
+    body: "Crews are working on a roughly 7,000-square-foot Ford's Garage at the northwest corner of U.S. 301 and Alder Green Drive, with a December opening planned. It'll be the 24th in Florida and the fifth in the Tampa Bay area.\\nThe company says management hiring starts about six months ahead, with another 125 to 150 people brought on six to eight weeks before opening, settling around 100 to 110 once things level out. That's real work close to home for anyone looking.\\nIf you want a preview, the Brandon location on Causeway tells you what's coming — burgers, craft beer, a Model T out front, gas-pump beer taps inside."
   },
 
   {
-    tag: "Weather · Keep an eye out",
-    title: "Wet week ahead, and the tropics are looking our way",
-    body: "As of Friday night, the National Hurricane Center is watching showers and storms over the eastern Gulf and across the peninsula, tied to an upper-level low and a surface trough. There's no surface circulation right now, but forecasters say some gradual development is possible as it drifts north — and either way it means heavy rain along the Florida west coast for the next several days.\\nThe odds are low: 10 percent through 48 hours, 30 percent over seven days. Nothing to lose sleep over.\\nJust plan for soggy afternoons. Don't try to outrun the lightning, don't drive through standing water, and if your gutters are still holding leaves from the last round, this is the weekend to clear them."
-  },
-
-  {
-    tag: "Apollo Beach · This morning",
-    title: "The market's on at the rec park",
-    body: "The Apollo Beach Market runs today starting at 9 a.m. at Apollo Beach Recreation Park, 664 Golf and Sea Blvd. Cousins Maine Lobster is on the lineup this week.\\nGo early — see the note above about afternoon storms."
+    tag: "Rainy day plan",
+    title: "Somewhere dry to take the kids today",
+    body: "With the heaviest rain landing this afternoon, the SouthShore Regional Library in Ruskin makes a good call — free, air conditioned, and summer reading is still going.\\nSkip the Manatee Viewing Center. Manatee season runs November through April, so there's nothing to see out there this time of year. The Florida Aquarium downtown is entirely indoors, which is the right kind of trip for a day like this.\\nOr do what most of us will do — let the afternoon storm roll through, sit on the porch with the door open, and watch it come down. There are worse ways to spend a Sunday in July."
   }
 
 ];
