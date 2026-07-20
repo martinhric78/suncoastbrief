@@ -1,49 +1,43 @@
 /* ===================================================================
-   THE SUNCOAST BRIEF — SUNDAY, JULY 19
+   THE SUNCOAST BRIEF — MONDAY, JULY 20
 =================================================================== */
 
 window.SUNCOAST_STORIES = [
 
   {
-    tag: "Weather · Today",
-    title: "Today's the wettest day of the week — here's what's coming",
-    body: "The upper-level low sitting off our coast in the Gulf is easing north, and as of early Saturday forecasters still saw no sign of a closed circulation. Good news on that front. The rain is another story.\nThe Tampa Bay area is looking at 6 to 8 inches of rain over the next seven days, and the heaviest of it lands today. Odds of the system becoming a named storm are still low — near zero over the next two days, about 20 percent over seven.\nSo nothing to panic about. But plan around it. Don't drive through standing water, because you can't see how deep it is and it doesn't take much to float a car. If your yard holds water, move anything off the ground now. And if you've been putting off clearing the gutters, today's the day you find out."
+    tag: "Getting around · This week",
+    title: "Big Bend Road closures start tonight, and 41 gets tied up Monday",
+    body: "FDOT has a full week of lane and road closures across the county, and a couple of them land right on top of us.\nSouthbound I-75 at County Road 672 — that's Big Bend Road — closes overnight from 9 p.m. to 6 a.m., starting tonight and running through Thursday, July 23. If you work an overnight shift or head out early, plan the detour now instead of at 5 a.m.\nFarther north, I-75 between SR 574 and Fowler will close nightly from 10 p.m. to 5 a.m. through Friday. And US 41 over the Hillsborough River at Nebraska Avenue has daytime closures Monday and Tuesday, 10:30 a.m. to 8:30 p.m. — that one will back things up in the middle of the day, not just overnight.\nThe 22nd Street Causeway bridge over McKay Bay is also closing nightly starting at 7 p.m. Add ten minutes and you'll be fine."
   },
 
   {
-    tag: "Your wallet · Starts tomorrow",
-    title: "Tax-free shopping opens tomorrow and runs a full month",
-    body: "Florida's back-to-school sales tax holiday starts Monday, July 20, and runs through Thursday, August 20. The Legislature moved the window up so families can shop before school starts instead of during it. What used to be a three-day weekend is now a solid month.\nCovered: clothing, shoes, wallets, bags, backpacks and diaper bags at $100 or less per item. School supplies at $50 or less. Learning aids and puzzles at $30 or less. Computers and accessories at $1,500 or less for home use.\nNot covered: cell phones, video game consoles, and anything bought for a business.\nThe $100 cap is per item, not per cart — a $95 pair of shoes and a $90 backpack are both tax-free in the same trip. Full list is at floridarevenue.com.\nSo whatever you were about to buy today, it's worth waiting one more day."
+    tag: "Out on the water",
+    title: "Scallop season is open, and the closest spot is about an hour up the road",
+    body: "If you've never done it, scalloping is an underwater Easter egg hunt in three or four feet of water, and it's one of the best cheap family days Florida gives you.\nThe Pasco zone is the closest one to us and it's open now through August 18 — the shortest window of any zone in the state, so don't sit on it. It covers state waters south of the Hernando-Pasco line up to the Anclote Key Lighthouse, including the Anclote River. If you'd rather go where the water's clearer, Citrus and Hernando counties — Crystal River and Homosassa — run all the way through September 24.\nThe rules: 2 gallons of whole scallops in the shell per person, or a pint of shucked meat. Ten gallons max per boat, and no one person can go over their own limit. Hand or dip net only. You need a Florida saltwater fishing license unless you're wading from shore and your feet never leave the bottom, in which case the free shoreline license covers you.\nTwo things the regulars will tell you: go on a weekday, and don't dump your shells in the river when you're done — they pile up and cut people's feet."
   },
 
   {
-    tag: "Mark the calendar",
-    title: "School's back August 10",
-    body: "Hillsborough County students return Monday, August 10, with the year running through Friday, May 28. Teachers are back the week prior.\nThat's three full weeks of tax-free shopping between tomorrow and the first bell. No reason to fight the crowd on opening day."
+    tag: "At the movies",
+    title: "Nolan's 'The Odyssey' just posted the biggest opening night of the year",
+    body: "Christopher Nolan's take on Homer opened Friday and pulled $17.6 million from Thursday preview screenings alone — the biggest preview number of 2026, ahead of Toy Story 5.\nMatt Damon plays Odysseus, with Anne Hathaway, Tom Holland, Zendaya, Robert Pattinson and Lupita Nyong'o around him. Nolan shot the entire thing on IMAX cameras, the first film ever made that way, so if you're going, go big-screen.\nTwo things before you buy tickets: it's rated R, and it runs about three hours. Date night, not family night.\nIf you've got younger kids, the live-action Moana and Minions & Monsters are both still playing and Toy Story 5 is hanging on. Spider-Man: Brand New Day lands July 31."
   },
 
   {
-    tag: "Ruskin · Free",
-    title: "Free school supplies and a fossil dig, August 1",
-    body: "Camp Bayou Outdoor Learning Center holds its 18th annual Back to School – Back to Nature morning on Saturday, August 1, from 9 to noon at 4140 24th Street SE in Ruskin. Admission and parking are free, no reservation needed.\nKids move table to table for hands-on nature activities and pick up free school supplies along the way. Every child gets a raffle ticket, with drawings every half hour for backpacks, lunch bags and journals — you have to be there to win. This year's tables include the Paleo Preserve Fossil Museum, Sam's Honeybees, the SouthShore Regional Library, Little Manatee River State Park, the Manatee Viewing Center and the Florida Aquarium.\nFree cart tours run all morning, and the fossil museum will be open — saber-tooth cats, mastodons and giant sloths all walked this same ground. Five dollars gets a kid into the stocked dig pit, and they keep whatever they pull out. campbayou.org or 813-641-8545."
+    tag: "Good to know",
+    title: "The county gives away free groceries once a month, and nobody has to qualify",
+    body: "This one doesn't get talked about enough. Hillsborough County's Healthy Living Program runs a community health fair on a Saturday most months, and every one of them includes free groceries — no income restrictions, no eligibility paperwork, no questions. You show up.\nThe food comes through Feeding Tampa Bay and usually runs to fresh fruit and vegetables, meat, canned goods and staples like beans and rice. Distribution goes 9 to 10:30 a.m., first come first served, and the fair itself runs until noon with free health screenings, vaccinations when they have them, and activities for the kids.\nThe catch for us is location — it rotates around the county and lands in Tampa or Plant City more often than down here, so it's a drive. Worth knowing about anyway. Call (813) 272-5040, option 7, to ask where the next one is."
   },
 
   {
-    tag: "Busch Gardens · Two weeks left",
-    title: "Kumba's last ride is August 2",
-    body: "Busch Gardens confirmed this week that Kumba is retiring after 33 years, with the final rides on Sunday, August 2. Pass members get an exclusive window the morning before, Saturday, August 1, from 8 to 11.\nThe ride drops 135 feet, hits 60 miles an hour and runs seven inversions in under three minutes. When it opened in 1993 it was the tallest, fastest and longest coaster in Florida, with the tallest vertical loop in the world.\nWhat replaces it is called Kumba's Revenge — the park describes it as an extension of the existing coaster, part of a $100 million-plus investment. Details come later this year. If there's a kid in your house who's been waiting to be tall enough, the clock is running."
+    tag: "Your wallet",
+    title: "Your TRIM notice comes next month, and the rules changed this year",
+    body: "The Property Appraiser mails Truth in Millage notices in mid-August. It isn't a bill. It's the notice showing your assessed value, your exemptions, and the tax rates every authority is proposing — plus the dates of the budget hearings, which anyone can walk into.\nWhat's different this year: the state changed how cities and counties calculate their maximum rate. Under a law signed in late June, they can no longer factor in the rise in per capita personal income, and it now takes a two-thirds vote to adopt any rate above the rolled-back rate. Your August notice is where you'll find out whether that made a difference on your street.\nIf the assessed value looks wrong, you have 25 days from the mailing date to file with the Value Adjustment Board. The fee runs about $15 and the deadline is printed right on the notice. You can also just call the Property Appraiser first and ask for an informal review — that one's free."
   },
 
   {
-    tag: "Riverview · Coming soon",
-    title: "Ford's Garage is going up on 301",
-    body: "Crews are working on a roughly 7,000-square-foot Ford's Garage at the northwest corner of U.S. 301 and Alder Green Drive, with a December opening planned. It'll be the 24th in Florida and the fifth in the Tampa Bay area.\nThe company says management hiring starts about six months ahead, with another 125 to 150 people brought on six to eight weeks before opening, settling around 100 to 110 once things level out. That's real work close to home for anyone looking.\nIf you want a preview, the Brandon location on Causeway tells you what's coming — burgers, craft beer, a Model T out front, gas-pump beer taps inside."
-  },
-
-  {
-    tag: "Rainy day plan",
-    title: "Somewhere dry to take the kids today",
-    body: "With the heaviest rain landing this afternoon, the SouthShore Regional Library in Ruskin makes a good call — free, air conditioned, and summer reading is still going.\nSkip the Manatee Viewing Center. Manatee season runs November through April, so there's nothing to see out there this time of year. The Florida Aquarium downtown is entirely indoors, which is the right kind of trip for a day like this.\nOr do what most of us will do — let the afternoon storm roll through, sit on the porch with the door open, and watch it come down. There are worse ways to spend a Sunday in July."
+    tag: "Florida living",
+    title: "Insurance is finally going down — but only if you go looking",
+    body: "Here's something we haven't been able to say in years. Citizens rates dropped statewide effective July 1, averaging about 8.8 percent on multiperil policies and 5.5 percent on wind-only. On the auto side, several of the big carriers have filed decreases in the 7 to 9 percent range.\nThe part that matters: none of it lands in your lap automatically. Rates change when your policy renews, not the day they're approved, and different companies filed at different times.\nSo put a note on the calendar 60 days ahead of your renewal date and shop it. Pull three quotes. And if you've put on a newer roof or added wind mitigation features and haven't had them re-credited lately, ask about that too — it's the kind of thing that sits unclaimed for years. An hour of phone calls for a few hundred dollars is a decent trade."
   }
 
 ];
