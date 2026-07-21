@@ -1,43 +1,43 @@
 /* ===================================================================
-   THE SUNCOAST BRIEF — MONDAY, JULY 20
+   THE SUNCOAST BRIEF — TUESDAY, JULY 21
 =================================================================== */
 
 window.SUNCOAST_STORIES = [
 
   {
-    tag: "Getting around · This week",
-    title: "Big Bend Road closures start tonight, and 41 gets tied up Monday",
-    body: "FDOT has a full week of lane and road closures across the county, and a couple of them land right on top of us.\nSouthbound I-75 at County Road 672 — that's Big Bend Road — closes overnight from 9 p.m. to 6 a.m., starting tonight and running through Thursday, July 23. If you work an overnight shift or head out early, plan the detour now instead of at 5 a.m.\nFarther north, I-75 between SR 574 and Fowler will close nightly from 10 p.m. to 5 a.m. through Friday. And US 41 over the Hillsborough River at Nebraska Avenue has daytime closures Monday and Tuesday, 10:30 a.m. to 8:30 p.m. — that one will back things up in the middle of the day, not just overnight.\nThe 22nd Street Causeway bridge over McKay Bay is also closing nightly starting at 7 p.m. Add ten minutes and you'll be fine."
+    tag: "Look up · Tuesday evening",
+    title: "There's a rocket launch tonight — here's how to catch it from our side",
+    body: "SpaceX is set to launch a Falcon 9 out of Cape Canaveral on Tuesday evening, with the window opening at 5:15 p.m. and running until about 9 o'clock. The Cape is a couple hours up the coast from us, but a clear eastern sky gives you a shot at seeing it.\nHonest truth on visibility: a launch this early is fighting daylight, so if it goes right at 5:15 you probably won't catch much. Your best odds are if it slips toward the back of the window, closer to dusk — that's when a rocket trail lights up and you can spot it low over the eastern horizon. Find a spot with a clear view that way and give it a few minutes after liftoff for the sound and sight to reach you.\nThis one's a good story even if you miss it. The rocket is carrying a Northrop Grumman spacecraft built to fly up and latch onto aging satellites already in orbit, giving them years more life instead of letting them become space junk. The booster flying it has been to space 31 times already — this is its last trip, so it's a fitting send-off."
   },
 
   {
-    tag: "Out on the water",
-    title: "Scallop season is open, and the closest spot is about an hour up the road",
-    body: "If you've never done it, scalloping is an underwater Easter egg hunt in three or four feet of water, and it's one of the best cheap family days Florida gives you.\nThe Pasco zone is the closest one to us and it's open now through August 18 — the shortest window of any zone in the state, so don't sit on it. It covers state waters south of the Hernando-Pasco line up to the Anclote Key Lighthouse, including the Anclote River. If you'd rather go where the water's clearer, Citrus and Hernando counties — Crystal River and Homosassa — run all the way through September 24.\nThe rules: 2 gallons of whole scallops in the shell per person, or a pint of shucked meat. Ten gallons max per boat, and no one person can go over their own limit. Hand or dip net only. You need a Florida saltwater fishing license unless you're wading from shore and your feet never leave the bottom, in which case the free shoreline license covers you.\nTwo things the regulars will tell you: go on a weekday, and don't dump your shells in the river when you're done — they pile up and cut people's feet."
+    tag: "Tampa · A good one",
+    title: "The last clock shop of its kind, and two kids keeping it alive",
+    body: "There's a family-run shop up on North Florida Avenue in Tampa where time still ticks by hand. Boyd Clocks has been repairing and restoring mechanical clocks since 1944 — grandfather clocks, cuckoo clocks, hundred-year-old heirlooms — and the current owner has been at the bench for close to 40 years.\nWhat makes it worth telling right now is who's standing next to him. As clockmakers around the country retire or pass on and nobody replaces them, two young apprentices are learning the trade the slow way, by hand, one gear at a time. The shop restores thousands of timepieces a year, a lot of them the kind that get handed down through a family and stop working right when the person who wound them is gone.\nIf you've got a clock in a closet that hasn't chimed in years, this is the place that can bring it back. Call ahead before you drive up, since the hours run by appointment more often than not these days."
   },
 
   {
-    tag: "At the movies",
-    title: "Nolan's 'The Odyssey' just posted the biggest opening night of the year",
-    body: "Christopher Nolan's take on Homer opened Friday and pulled $17.6 million from Thursday preview screenings alone — the biggest preview number of 2026, ahead of Toy Story 5.\nMatt Damon plays Odysseus, with Anne Hathaway, Tom Holland, Zendaya, Robert Pattinson and Lupita Nyong'o around him. Nolan shot the entire thing on IMAX cameras, the first film ever made that way, so if you're going, go big-screen.\nTwo things before you buy tickets: it's rated R, and it runs about three hours. Date night, not family night.\nIf you've got younger kids, the live-action Moana and Minions & Monsters are both still playing and Toy Story 5 is hanging on. Spider-Man: Brand New Day lands July 31."
+    tag: "Apollo Beach · Thursday",
+    title: "Free pizza party at Apollo Pizza this week",
+    body: "Apollo Pizza is throwing a free pizza party Thursday, July 23, at 6:30 p.m. at their spot at 1312 Apollo Beach Blvd.\nNot much more to say than that — free pizza is free pizza. Bring the kids, meet a few neighbors, and if you've never been, it's an easy way to try the place without spending a dime. Worth confirming the details with them before you head over in case they cap the crowd."
   },
 
   {
-    tag: "Good to know",
-    title: "The county gives away free groceries once a month, and nobody has to qualify",
-    body: "This one doesn't get talked about enough. Hillsborough County's Healthy Living Program runs a community health fair on a Saturday most months, and every one of them includes free groceries — no income restrictions, no eligibility paperwork, no questions. You show up.\nThe food comes through Feeding Tampa Bay and usually runs to fresh fruit and vegetables, meat, canned goods and staples like beans and rice. Distribution goes 9 to 10:30 a.m., first come first served, and the fair itself runs until noon with free health screenings, vaccinations when they have them, and activities for the kids.\nThe catch for us is location — it rotates around the county and lands in Tampa or Plant City more often than down here, so it's a drive. Worth knowing about anyway. Call (813) 272-5040, option 7, to ask where the next one is."
+    tag: "Brandon · Now open",
+    title: "A new athletic training gym opened in Brandon",
+    body: "D1 Training has opened in Brandon, bringing the kind of coaching and strength work that's usually reserved for college athletes down to the level of local kids, adults and families. It's built around structured, coached workouts rather than the wander-around-and-figure-it-out gym experience.\nThe draw here is for the family with a middle-schooler or high-schooler who plays a sport and wants real training — speed, strength, conditioning — with someone actually running the session. They work with adults too, so it's not just for the young athletes in the house.\nIf you've got a kid heading into a fall sport, now's the window to get them moving before practices start. Look them up as D1 Training Brandon for hours and what the first session costs."
   },
 
   {
-    tag: "Your wallet",
-    title: "Your TRIM notice comes next month, and the rules changed this year",
-    body: "The Property Appraiser mails Truth in Millage notices in mid-August. It isn't a bill. It's the notice showing your assessed value, your exemptions, and the tax rates every authority is proposing — plus the dates of the budget hearings, which anyone can walk into.\nWhat's different this year: the state changed how cities and counties calculate their maximum rate. Under a law signed in late June, they can no longer factor in the rise in per capita personal income, and it now takes a two-thirds vote to adopt any rate above the rolled-back rate. Your August notice is where you'll find out whether that made a difference on your street.\nIf the assessed value looks wrong, you have 25 days from the mailing date to file with the Value Adjustment Board. The fee runs about $15 and the deadline is printed right on the notice. You can also just call the Property Appraiser first and ask for an informal review — that one's free."
+    tag: "Riverview · For parents",
+    title: "After-school care that comes with dance classes",
+    body: "With school back in three weeks, here's one for the working parents scrambling to line up afternoons. Dancing for Joy at 11691 Boyette Rd. in Riverview is now offering after-school care, and it's a little different from the usual.\nThey'll pick your child up from local schools and keep them until 6 p.m. The weekly rate of $180 covers dance classes, homework help, creative playtime, educational videos and snacks — so it's care and an activity rolled into one, which beats paying separately for both.\nIf that fits what your fall is shaping up to look like, they take registrations through their website or by phone at 813-610-0801. Spots in these fill up fast once school starts, so it's worth a call sooner than later."
   },
 
   {
-    tag: "Florida living",
-    title: "Insurance is finally going down — but only if you go looking",
-    body: "Here's something we haven't been able to say in years. Citizens rates dropped statewide effective July 1, averaging about 8.8 percent on multiperil policies and 5.5 percent on wind-only. On the auto side, several of the big carriers have filed decreases in the 7 to 9 percent range.\nThe part that matters: none of it lands in your lap automatically. Rates change when your policy renews, not the day they're approved, and different companies filed at different times.\nSo put a note on the calendar 60 days ahead of your renewal date and shop it. Pull three quotes. And if you've put on a newer roof or added wind mitigation features and haven't had them re-credited lately, ask about that too — it's the kind of thing that sits unclaimed for years. An hour of phone calls for a few hundred dollars is a decent trade."
+    tag: "Ruskin · Mark the calendar",
+    title: "One more free back-to-school morning, August 1",
+    body: "We told you about the free school supplies out at Camp Bayou on August 1 — turns out that's a busy Saturday in Ruskin. The Ruskin Back to School Carnival runs the same morning, starting at 10 a.m. at the Ruskin Park and Recreation Center, 901 6th St. SE.\nIt's a carnival built around getting kids ready for the year — the kind of morning where they come home with a full backpack and you didn't spend a fortune. Between this and Camp Bayou down the road, a family could knock out most of the school-supply list in one Saturday and call it a day.\nConfirm the time before you go, since community events like this sometimes shift, but pencil it in. August 1 is the day to be in Ruskin if you've got kids."
   }
 
 ];
