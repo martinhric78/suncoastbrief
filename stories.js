@@ -1,43 +1,43 @@
 /* ===================================================================
-   THE SUNCOAST BRIEF — WEDNESDAY, JULY 22
+   THE SUNCOAST BRIEF — FRIDAY, JULY 24
 =================================================================== */
 
 window.SUNCOAST_STORIES = [
 
   {
-    tag: "Apollo Beach · Tomorrow",
-    title: "Free pizza party at Apollo Pizza on Thursday",
-    body: "Quick one worth knowing: Apollo Pizza is throwing a free pizza party Thursday, July 23, at 6:30 p.m. at their spot at 1312 Apollo Beach Blvd.\nNot much more to it than that — free pizza is free pizza. Bring the kids, meet a few neighbors, and if you've never been in, it's an easy way to try the place without spending a dime. Worth a quick call to confirm before you head over, in case they cap the crowd."
+    tag: "Weather · This weekend",
+    title: "It's the heat, not the rain, that'll get you this weekend",
+    body: "Today's the hottest of the stretch — right around 94 with plenty of sun and only a slim chance of a storm. Saturday backs off a touch to about 91, and Sunday runs 89 with better than a one-in-three shot at afternoon storms.\nThose numbers undersell it, though. The weather service is calling for mid to upper 90s across the area with heat index readings into the triple digits, and rain chances climbing each afternoon and evening through the weekend. So the pattern is simple: mornings are yours, afternoons belong to the heat and the storms.\nDo the outdoor stuff before noon. Sun's up at 6:49 and down at 8:24, so there's plenty of early daylight to work with. Drink more water than you think you need, and keep an eye on the older folks and the dogs — pavement gets hot enough to hurt paws well before it feels bad to us.\nAnd the storm you've been hearing about on the news is well west of us, moving away. Not our problem this time."
   },
 
   {
-    tag: "This weekend · Free",
-    title: "Free 'Little Mermaid' sing-along under the stars Sunday",
-    body: "Here's a good free one for the family this weekend. Tampa Theatre is running its Summer Sing-Along series outdoors at Sparkman Wharf while its historic downtown auditorium is closed for a restoration ahead of its 100th birthday in October. Sunday, July 26, they're screening the 2023 live-action Little Mermaid, and the whole thing is free — no ticket, no reservation.\nMovie starts at 6:30 p.m. at Sparkman Wharf, 615 Channelside Drive. The catch worth knowing: the first 100 people through get a free LED fan and a bag of the theater's famous popcorn, and that giveaway starts at 6. So if you want the freebies, get there early and bring a blanket or a low chair for the turf.\nIt's a sing-along, so nobody's going to look at you funny for belting out the songs. That's the whole point."
+    tag: "Tomorrow · Free backpacks",
+    title: "Free school supplies in Tampa on Saturday",
+    body: "If you didn't get out to a supply giveaway yet, there's one tomorrow. A community back-to-school event runs Saturday, July 25, at the Lesley 'Les' Miller Jr. All People's Community Park & Life Center in Tampa, with free backpacks, school supplies, music, food and activities for the kids.\nOne heads-up: listings show the start time as either 10 or 11 a.m., so aim for 10 to be safe. With giveaways like these, the free stuff tends to go early anyway.\nIt's a drive up from our end, but if a backpack and a full supply list are what stand between you and August 10, it's worth the gas."
   },
 
   {
-    tag: "This weekend · Fun",
-    title: "An entire festival built around ice cream",
-    body: "If Sunday's a hot one — and it will be — the Tampa Bay Ice Cream Festival might be the best way to spend it. Dozens of ice cream shops, dessert makers and frozen-treat vendors take over the St. Pete Pier's Family Park, competing for Golden Ice Cream Trophies in categories like best hard ice cream, best soft serve and best non-dairy treat.\nIt runs Sunday, July 26, from 11 a.m. to 8 p.m. out on the Pier. It's a drive across the bay, so make a day of it — the Pier itself has plenty to do while you're out there.\nCheck the festival's details and any admission or tasting costs before you load up the car, since that kind of thing changes year to year. But a whole day of judging ice cream is a hard thing for a kid to say no to."
+    tag: "Mark the calendar · Aug. 1",
+    title: "1,000 free backpacks at the county's big back-to-school fair",
+    body: "This is the big one. Hillsborough County Public Schools holds its 19th Annual Back to School Fair on Saturday, August 1, from 10 a.m. to 2 p.m., and this year it's at a new spot — Citrus Park Town Center. Admission is free.\nThe headline is 1,000 free backpacks for the first 1,000 kids in the backpack line. Word is that line starts forming around 9 a.m., and when the backpacks are gone, they're gone. So if that's why you're going, get there early.\nBeyond the backpacks there's face painting, photos with mascots from the Lightning and ZooTampa, princesses, student performances, games, contests and drawings all day, plus 50-plus exhibitors with resources for every grade level. The whole thing is inside an air-conditioned mall, which in August is half the appeal.\nIt also lands smack in the middle of the tax-free holiday, so you can knock out the shopping in the same trip. Worth planning your Saturday around."
   },
 
   {
-    tag: "Tampa · A good one",
-    title: "The last clock shop of its kind, and two kids keeping it alive",
-    body: "There's a family-run shop up on North Florida Avenue in Tampa where time still gets fixed by hand. Boyd Clocks has been repairing and restoring mechanical clocks since 1944 — grandfather clocks, cuckoo clocks, hundred-year-old heirlooms — and the current owner has been at the bench close to 40 years.\nWhat makes it worth telling right now is who's standing next to him. As clockmakers around the country retire or pass on and nobody steps in behind them, two young apprentices are learning the trade the slow way, by hand, one gear at a time. The shop brings thousands of timepieces back to life a year, a lot of them the kind that get handed down through a family and go quiet right when the person who used to wind them is gone.\nIf you've got a clock in a closet that hasn't chimed in years, this is the place that can bring it back. Call ahead before you drive up — the hours run by appointment more often than not these days."
+    tag: "Baseball · All weekend",
+    title: "Rays are home all weekend against Cleveland",
+    body: "Three straight nights of baseball at Tropicana Field, with the Rays hosting the Cleveland Guardians Friday through Sunday.\nHere's the underrated part for us in July: it's a dome. While everybody else is sweating through an outdoor afternoon or watching a storm roll in, you're sitting in air conditioning. Hard to beat that in the last week of July.\nCheck the game times before you head over, since they shift across the weekend. It's about an hour from most of our end of the county depending on traffic over the bridge."
   },
 
   {
-    tag: "Riverview · For parents",
-    title: "After-school care that comes with dance classes",
-    body: "With school back in less than three weeks, here's one for the working parents lining up their afternoons. Dancing for Joy at 11691 Boyette Rd. in Riverview is offering after-school care, and it's a little different from the usual.\nThey'll pick your child up from local schools and keep them until 6 p.m. The weekly rate of $180 covers dance classes, homework help, creative playtime and a snack — so it's care and an activity rolled into one, which beats paying separately for both.\nIf that fits the way your fall is shaping up, they take registrations through their website or by phone at 813-610-0801. Spots like these fill up fast once school starts, so it's worth a call sooner rather than later."
+    tag: "Coming up · Aug. 8-9",
+    title: "A whole LEGO expo is coming to the Fairgrounds",
+    body: "Put this one on the calendar if you've got a builder in the house. The Brick Fan Event, billed as the South's biggest LEGO fan expo, lands at the Florida State Fairgrounds the weekend of August 8 and 9, with doors at 10 a.m.\nIt's two days of enormous fan-built creations, games, contests, interactive zones and special guests — the kind of thing where a kid who plays with a bin of bricks at home finds out how far people take it.\nThat's the weekend before school starts, and it's indoors. Check the event's site for ticket prices before you go, since these usually run cheaper in advance than at the door."
   },
 
   {
-    tag: "Brandon · Now open",
-    title: "A new athletic-training gym opened in Brandon",
-    body: "D1 Training has opened in Brandon, bringing the kind of coached strength and speed work that used to be reserved for college athletes down to the level of local kids, adults and families. It's built around structured sessions with someone actually running them, not the wander-around-and-guess gym experience.\nThe real draw is for the family with a middle- or high-schooler who plays a sport and wants proper training before the season starts. They work with grown-ups too, so it's not only for the young athletes in the house.\nIf you've got a kid heading into a fall sport, now's the window to get them moving before practices ramp up. Look them up as D1 Training Brandon for hours and what a first session runs."
+    tag: "Lithia · Now open",
+    title: "Chill Cawfee has moved to FishHawk",
+    body: "Chill Cawfee has packed up its Valrico spot and reopened at 16741 FishHawk Blvd. in Lithia. Same shop, new address, and now a lot more convenient if you're on that side of things.\nWorth knowing if it was already part of your morning routine and you've been wondering where it went. If you've never been, that stretch of FishHawk Boulevard is easy to get in and out of.\nDetails are at chillcawfee.com."
   }
 
 ];
