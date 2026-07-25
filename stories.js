@@ -1,43 +1,43 @@
 /* ===================================================================
-   THE SUNCOAST BRIEF — FRIDAY, JULY 24
+   THE SUNCOAST BRIEF — SATURDAY, JULY 25
 =================================================================== */
 
 window.SUNCOAST_STORIES = [
 
   {
-    tag: "Weather · This weekend",
-    title: "It's the heat, not the rain, that'll get you this weekend",
-    body: "Today's the hottest of the stretch — right around 94 with plenty of sun and only a slim chance of a storm. Saturday backs off a touch to about 91, and Sunday runs 89 with better than a one-in-three shot at afternoon storms.\nThose numbers undersell it, though. The weather service is calling for mid to upper 90s across the area with heat index readings into the triple digits, and rain chances climbing each afternoon and evening through the weekend. So the pattern is simple: mornings are yours, afternoons belong to the heat and the storms.\nDo the outdoor stuff before noon. Sun's up at 6:49 and down at 8:24, so there's plenty of early daylight to work with. Drink more water than you think you need, and keep an eye on the older folks and the dogs — pavement gets hot enough to hurt paws well before it feels bad to us.\nAnd the storm you've been hearing about on the news is well west of us, moving away. Not our problem this time."
+    tag: "On the water · Weekend",
+    title: "It's tarpon season, and they're rolling right off our beaches",
+    body: "If you fish, this is the stretch you wait all year for. The tarpon are here — the 'Silver King,' fish over 100 pounds — cruising the beaches, passes and around the bridges on their summer run. Hook one and you're in for the fight of your life, and because they have to stay in the water to be released, it's all about the battle, not the cooler.\nCloser in, the snook bite has been strong around the mangroves and the passes, and they really turn on at night around dock lights and bridge lights. Just know that snook are catch-and-release right now during the summer closure, so keep them wet, be quick about it, and send them home — check the FWC rules before you go if you're unsure. Redfish and trout are working the flats early, best on a moving tide before the heat sets in.\nThe theme this time of year is simple: go early or go at night. Once that midday sun is up, the fish get lazy and so will you. Dawn on a falling tide is your best friend."
   },
 
   {
-    tag: "Tomorrow · Free backpacks",
-    title: "Free school supplies in Tampa on Saturday",
-    body: "If you didn't get out to a supply giveaway yet, there's one tomorrow. A community back-to-school event runs Saturday, July 25, at the Lesley 'Les' Miller Jr. All People's Community Park & Life Center in Tampa, with free backpacks, school supplies, music, food and activities for the kids.\nOne heads-up: listings show the start time as either 10 or 11 a.m., so aim for 10 to be safe. With giveaways like these, the free stuff tends to go early anyway.\nIt's a drive up from our end, but if a backpack and a full supply list are what stand between you and August 10, it's worth the gas."
+    tag: "Tonight · Beat the heat",
+    title: "Adventure Island turns neon after dark tonight",
+    body: "Here's a fun one for tonight. AquaGlow is back at Adventure Island — the water park across from Busch Gardens throws an after-hours neon swim party on select Friday and Saturday nights, and tonight, Saturday the 25th, is one of them. It runs 8 to 11 p.m., with park entry from 7.\nThey light the whole place up — glowing slide tubes, a laser show over the wave pool, a foam party and music all night. Because it's limited capacity, the slide lines are short, which anyone who's done the park on a hot afternoon will tell you is the real luxury.\nIt's separately ticketed unless you're already there on a day pass, with tickets starting around $40 and a meal add-on for $10. It's the rare way to enjoy a Florida water park without cooking in the sun. Check Adventure Island's site to grab a spot before you drive up."
   },
 
   {
-    tag: "Mark the calendar · Aug. 1",
-    title: "1,000 free backpacks at the county's big back-to-school fair",
-    body: "This is the big one. Hillsborough County Public Schools holds its 19th Annual Back to School Fair on Saturday, August 1, from 10 a.m. to 2 p.m., and this year it's at a new spot — Citrus Park Town Center. Admission is free.\nThe headline is 1,000 free backpacks for the first 1,000 kids in the backpack line. Word is that line starts forming around 9 a.m., and when the backpacks are gone, they're gone. So if that's why you're going, get there early.\nBeyond the backpacks there's face painting, photos with mascots from the Lightning and ZooTampa, princesses, student performances, games, contests and drawings all day, plus 50-plus exhibitors with resources for every grade level. The whole thing is inside an air-conditioned mall, which in August is half the appeal.\nIt also lands smack in the middle of the tax-free holiday, so you can knock out the shopping in the same trip. Worth planning your Saturday around."
+    tag: "Ruskin · Weekend classic",
+    title: "The last family drive-in in America is right here in Ruskin",
+    body: "Not everybody who's moved here lately knows we've got one of these. The Ruskin Family Drive-In on U.S. 41 has been showing movies under the stars since 1952 — its first feature was 'Singin' in the Rain' — and they proudly call themselves the last family drive-in in the USA. Two movies a night on a 2,000-square-foot screen, snack bar and all.\nWeekends are the time to go, and they fill up fast, so get there early and stake out your spot. Two things to know before you load up the car: it's cash only, no cards, and there are no movies on Mondays or Tuesdays.\nIt's about the most wholesome, old-Florida way to spend a warm Saturday night there is — bring the kids in pajamas, pack some pillows and blankets, and check their website for what's playing this weekend."
   },
 
   {
-    tag: "Baseball · All weekend",
-    title: "Rays are home all weekend against Cleveland",
-    body: "Three straight nights of baseball at Tropicana Field, with the Rays hosting the Cleveland Guardians Friday through Sunday.\nHere's the underrated part for us in July: it's a dome. While everybody else is sweating through an outdoor afternoon or watching a storm roll in, you're sitting in air conditioning. Hard to beat that in the last week of July.\nCheck the game times before you head over, since they shift across the weekend. It's about an hour from most of our end of the county depending on traffic over the bridge."
+    tag: "Apollo Beach · Sunday morning",
+    title: "The Sunday market is back at the rec park",
+    body: "Get your Sunday going right at the Apollo Beach Market, running tomorrow starting at 9 a.m. at Apollo Beach Recreation Park, 664 Golf and Sea Blvd.\nIt's the usual good mix — local food and produce vendors, crafts, artisans and a few surprises, all in one easy spot close to home. It's the kind of morning where you go for a coffee and a look around and come home with dinner.\nGo early, both to beat the heat and because the good stuff tends to sell out by late morning."
   },
 
   {
-    tag: "Coming up · Aug. 8-9",
-    title: "A whole LEGO expo is coming to the Fairgrounds",
-    body: "Put this one on the calendar if you've got a builder in the house. The Brick Fan Event, billed as the South's biggest LEGO fan expo, lands at the Florida State Fairgrounds the weekend of August 8 and 9, with doors at 10 a.m.\nIt's two days of enormous fan-built creations, games, contests, interactive zones and special guests — the kind of thing where a kid who plays with a bin of bricks at home finds out how far people take it.\nThat's the weekend before school starts, and it's indoors. Check the event's site for ticket prices before you go, since these usually run cheaper in advance than at the door."
+    tag: "In the garden · Right now",
+    title: "Yes, you can still plant in this heat — here's what works",
+    body: "A lot of folks think July is too brutal to plant anything, but Florida gardening runs on its own calendar, and there's plenty that thrives in this heat right now. Okra, southern peas, sweet potatoes and herbs like basil actually love it — they'll take everything this summer throws at them.\nHere's the move most people miss, though: late July is when you start seeds indoors for the fall tomatoes and peppers you'll put in the ground come late August and September. Our real growing season is the fall, not the spring, and it sneaks up on you. Get those seeds going now and you'll be picking tomatoes when the snowbirds get back.\nWhatever you plant, water early in the morning so it isn't sitting wet overnight, and give new plantings some afternoon shade until they take hold."
   },
 
   {
-    tag: "Lithia · Now open",
-    title: "Chill Cawfee has moved to FishHawk",
-    body: "Chill Cawfee has packed up its Valrico spot and reopened at 16741 FishHawk Blvd. in Lithia. Same shop, new address, and now a lot more convenient if you're on that side of things.\nWorth knowing if it was already part of your morning routine and you've been wondering where it went. If you've never been, that stretch of FishHawk Boulevard is easy to get in and out of.\nDetails are at chillcawfee.com."
+    tag: "Ruskin · Free-ish and cool",
+    title: "A bayfront park most newcomers don't know about",
+    body: "When it's this hot, the move is to get near the water, and one of the best local spots to do it is E.G. Simmons Conservation Park in Ruskin. It's a big county park right on the bay with a small swimming beach, picnic shelters under the trees, a boat ramp, good shoreline fishing and even a campground if you want to make a night of it.\nIt's a favorite of folks who've been here a while and a happy surprise for those who haven't found it yet — a genuine slice of old Florida waterfront without the crowds of the beaches.\nThere's a small per-car entrance fee, so bring a little cash, and check hcfl.gov for current hours before you head out. Pack a cooler, grab a shady table, and let the bay breeze do the rest."
   }
 
 ];
