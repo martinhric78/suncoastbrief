@@ -1,43 +1,43 @@
 /* ===================================================================
-   THE SUNCOAST BRIEF — SATURDAY, JULY 25
+   THE SUNCOAST BRIEF — SUNDAY, JULY 26
 =================================================================== */
 
 window.SUNCOAST_STORIES = [
 
   {
-    tag: "On the water · Weekend",
-    title: "It's tarpon season, and they're rolling right off our beaches",
-    body: "If you fish, this is the stretch you wait all year for. The tarpon are here — the 'Silver King,' fish over 100 pounds — cruising the beaches, passes and around the bridges on their summer run. Hook one and you're in for the fight of your life, and because they have to stay in the water to be released, it's all about the battle, not the cooler.\nCloser in, the snook bite has been strong around the mangroves and the passes, and they really turn on at night around dock lights and bridge lights. Just know that snook are catch-and-release right now during the summer closure, so keep them wet, be quick about it, and send them home — check the FWC rules before you go if you're unsure. Redfish and trout are working the flats early, best on a moving tide before the heat sets in.\nThe theme this time of year is simple: go early or go at night. Once that midday sun is up, the fish get lazy and so will you. Dawn on a falling tide is your best friend."
+    tag: "Look up · This week",
+    title: "A meteor shower is running now — but temper your expectations",
+    body: "The Delta Aquariid meteor shower is active right now and peaks Tuesday into Wednesday night. In a perfect year you'd get 15 to 20 shooting stars an hour. This isn't a perfect year — the moon is nearly full on the 29th, right at the peak, and all that moonlight washes out everything but the brightest streaks.\nStill worth a look if you're a night owl. Best odds are after midnight into the pre-dawn hours, lying back and looking toward the southern sky, away from any lights. Give your eyes a good 15 or 20 minutes to adjust and skip the phone screen while you wait.\nIf this one's a bust, don't worry — the big show is coming. The Perseids, the best meteor shower of the year, peak the night of August 11 into the 12th, and the moon cooperates much better that week. Consider this your warm-up."
   },
 
   {
-    tag: "Tonight · Beat the heat",
-    title: "Adventure Island turns neon after dark tonight",
-    body: "Here's a fun one for tonight. AquaGlow is back at Adventure Island — the water park across from Busch Gardens throws an after-hours neon swim party on select Friday and Saturday nights, and tonight, Saturday the 25th, is one of them. It runs 8 to 11 p.m., with park entry from 7.\nThey light the whole place up — glowing slide tubes, a laser show over the wave pool, a foam party and music all night. Because it's limited capacity, the slide lines are short, which anyone who's done the park on a hot afternoon will tell you is the real luxury.\nIt's separately ticketed unless you're already there on a day pass, with tickets starting around $40 and a meal add-on for $10. It's the rare way to enjoy a Florida water park without cooking in the sun. Check Adventure Island's site to grab a spot before you drive up."
+    tag: "Today · Last day",
+    title: "Christmas in July, in an air-conditioned hall",
+    body: "If the heat's got you beat, here's an indoor one for today. The Christmas in July market wraps up its weekend run today at the Florida State Fairgrounds Entertainment Hall, 10 a.m. to 5 p.m., with more than 175 vendors selling handcrafted gifts, jewelry, home décor and treats — plus a Santa appearance, because why not.\nIt's a fun, quirky way to get a jump on holiday shopping while it's still summer, and the whole thing is indoors and cool. Beat the afternoon heat and knock out a few gifts five months early.\nCheck the Fairgrounds listing for admission and parking details before you head over."
   },
 
   {
-    tag: "Ruskin · Weekend classic",
-    title: "The last family drive-in in America is right here in Ruskin",
-    body: "Not everybody who's moved here lately knows we've got one of these. The Ruskin Family Drive-In on U.S. 41 has been showing movies under the stars since 1952 — its first feature was 'Singin' in the Rain' — and they proudly call themselves the last family drive-in in the USA. Two movies a night on a 2,000-square-foot screen, snack bar and all.\nWeekends are the time to go, and they fill up fast, so get there early and stake out your spot. Two things to know before you load up the car: it's cash only, no cards, and there are no movies on Mondays or Tuesdays.\nIt's about the most wholesome, old-Florida way to spend a warm Saturday night there is — bring the kids in pajamas, pack some pillows and blankets, and check their website for what's playing this weekend."
+    tag: "Beat the heat · Local",
+    title: "The 72-degree swimming hole hiding in Lithia",
+    body: "A lot of folks who've lived here for years have never been, so consider this your nudge. Lithia Springs, tucked along the Alafia River at 3932 Lithia Springs Rd., pumps out crystal-clear water that stays 72 degrees all year — which on a July afternoon feels like walking into a refrigerator, in the best way.\nIt's a Hillsborough County park, so it's cheap: $2 per car to get in, plus $2 a person to swim. There are lifeguards, shady picnic tables, a playground and hiking trails, and it's shallow enough that little kids do great. The catch is it's popular — capacity is capped and the weekend swim slots sell out early, often before 10 a.m. — so reserve ahead through the county site and go for the morning block if you can.\nThey also run a special evening 'Night Swims' event some Saturdays, where they light the spring with underwater lights and tiki torches for a ranger-led dip. Worth watching the county calendar for the next one."
   },
 
   {
-    tag: "Apollo Beach · Sunday morning",
-    title: "The Sunday market is back at the rec park",
-    body: "Get your Sunday going right at the Apollo Beach Market, running tomorrow starting at 9 a.m. at Apollo Beach Recreation Park, 664 Golf and Sea Blvd.\nIt's the usual good mix — local food and produce vendors, crafts, artisans and a few surprises, all in one easy spot close to home. It's the kind of morning where you go for a coffee and a look around and come home with dinner.\nGo early, both to beat the heat and because the good stuff tends to sell out by late morning."
+    tag: "In season · Right now",
+    title: "It's mango season, and Florida is drowning in them",
+    body: "If you've got a neighbor with a mango tree, you already know — July and August are peak mango season in Florida, and the trees are absolutely loaded this year. Keep an eye out at the roadside stands, farmers markets and the folks who set a box out front with an honor jar.\nA ripe mango gives a little when you press it and smells sweet at the stem end. Once they're ripe, keep them in the fridge so they don't turn on you all at once.\nAnd if you end up with more than you can eat, which happens fast around here — freeze the chunks for smoothies, blend a batch into salsa with red onion and lime for taco night, or just eat one standing over the sink and accept that you're going to wear some of it. That's summer."
   },
 
   {
-    tag: "In the garden · Right now",
-    title: "Yes, you can still plant in this heat — here's what works",
-    body: "A lot of folks think July is too brutal to plant anything, but Florida gardening runs on its own calendar, and there's plenty that thrives in this heat right now. Okra, southern peas, sweet potatoes and herbs like basil actually love it — they'll take everything this summer throws at them.\nHere's the move most people miss, though: late July is when you start seeds indoors for the fall tomatoes and peppers you'll put in the ground come late August and September. Our real growing season is the fall, not the spring, and it sneaks up on you. Get those seeds going now and you'll be picking tomatoes when the snowbirds get back.\nWhatever you plant, water early in the morning so it isn't sitting wet overnight, and give new plantings some afternoon shade until they take hold."
+    tag: "Good to know · Pets",
+    title: "The county shelter is packed, and adoptions are just $20",
+    body: "Summer is the hardest season for animal shelters — more litters, more strays, more full kennels — and the Hillsborough County Pet Resource Center on Falkenburg Road feels it every year. It's the county's only open-admission shelter, meaning they never turn an animal away, so when intake climbs, they lean on the community to help clear space.\nHere's the useful part: adopting is cheap and quick. Any pet listed as 'ready-to-go' is already spayed or neutered, vaccinated and microchipped, and goes home the same day for a $20 fee. When the shelter gets really full, they've been known to waive fees entirely, so it's worth checking their online kennel before you go.\nThey're open Monday through Saturday, 10 to 5, closed Sundays. Not in a spot to adopt? Fostering even for a couple of weeks opens up a kennel and helps just as much. You can browse the adoptable dogs and cats anytime on the county's site."
   },
 
   {
-    tag: "Ruskin · Free-ish and cool",
-    title: "A bayfront park most newcomers don't know about",
-    body: "When it's this hot, the move is to get near the water, and one of the best local spots to do it is E.G. Simmons Conservation Park in Ruskin. It's a big county park right on the bay with a small swimming beach, picnic shelters under the trees, a boat ramp, good shoreline fishing and even a campground if you want to make a night of it.\nIt's a favorite of folks who've been here a while and a happy surprise for those who haven't found it yet — a genuine slice of old Florida waterfront without the crowds of the beaches.\nThere's a small per-car entrance fee, so bring a little cash, and check hcfl.gov for current hours before you head out. Pack a cooler, grab a shady table, and let the bay breeze do the rest."
+    tag: "Useful · Peace of mind",
+    title: "The quiet part of hurricane season is the smart time to prep",
+    body: "Nobody wants to think about it on a nice Sunday, but here's the practical truth: we're heading into the busy stretch of hurricane season, which peaks from August through October, and we've already had a couple of named storms out there. Right now is the calm window — and the smart time to get ready, before there's a cone on the map and a run on the stores.\nNothing dramatic needed. Top off your water (a gallon per person per day, a few days' worth), check that the flashlights have working batteries, refill any prescriptions that are running low, and make sure you've got a couple weeks of any must-have medicines. Snap phone photos of your important documents while you're at it.\nDoing it now, with no storm in sight, means you're not fighting an empty shelf and a long line later. Ten quiet minutes today buys a lot of peace of mind."
   }
 
 ];
