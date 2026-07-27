@@ -1,43 +1,43 @@
 /* ===================================================================
-   THE SUNCOAST BRIEF — SUNDAY, JULY 26
+   THE SUNCOAST BRIEF — MONDAY, JULY 27
 =================================================================== */
 
 window.SUNCOAST_STORIES = [
 
   {
-    tag: "Look up · This week",
-    title: "A meteor shower is running now — but temper your expectations",
-    body: "The Delta Aquariid meteor shower is active right now and peaks Tuesday into Wednesday night. In a perfect year you'd get 15 to 20 shooting stars an hour. This isn't a perfect year — the moon is nearly full on the 29th, right at the peak, and all that moonlight washes out everything but the brightest streaks.\nStill worth a look if you're a night owl. Best odds are after midnight into the pre-dawn hours, lying back and looking toward the southern sky, away from any lights. Give your eyes a good 15 or 20 minutes to adjust and skip the phone screen while you wait.\nIf this one's a bust, don't worry — the big show is coming. The Perseids, the best meteor shower of the year, peak the night of August 11 into the 12th, and the moon cooperates much better that week. Consider this your warm-up."
+    tag: "Countdown · Two weeks out",
+    title: "School's back in two weeks — a few things to knock out now",
+    body: "Hard to believe, but the first day of school is two weeks from today, Monday, August 10. Here's the short list of things that are a lot easier to handle this week than the weekend before.\nIf your child is starting in a Hillsborough school for the first time, they'll need a current physical and up-to-date shots on file, and every student heading into seventh grade needs their Tdap booster — those appointments book up fast this time of year, so call now if you haven't. Supply lists are posted on your school's website, and you've still got the tax-free holiday running through August 20 to buy it all. Bus routes usually post to the district site and app about a week out, so keep an eye there.\nAnd the quiet one nobody thinks about until it's too late: start nudging bedtimes earlier now, 15 minutes at a time. Two weeks of easing back beats one brutal Monday morning."
   },
 
   {
-    tag: "Today · Last day",
-    title: "Christmas in July, in an air-conditioned hall",
-    body: "If the heat's got you beat, here's an indoor one for today. The Christmas in July market wraps up its weekend run today at the Florida State Fairgrounds Entertainment Hall, 10 a.m. to 5 p.m., with more than 175 vendors selling handcrafted gifts, jewelry, home décor and treats — plus a Santa appearance, because why not.\nIt's a fun, quirky way to get a jump on holiday shopping while it's still summer, and the whole thing is indoors and cool. Beat the afternoon heat and knock out a few gifts five months early.\nCheck the Fairgrounds listing for admission and parking details before you head over."
+    tag: "Rays · This week",
+    title: "Rays sweep Cleveland, and Texas comes to town",
+    body: "Good weekend to be a Rays fan. They swept the Cleveland Guardians in all three games at the Trop, capping it with a 1-0 nail-biter on Sunday afternoon — the kind of tight, well-pitched game that's a blast to watch live.\nThey're off today, then back home to host the Texas Rangers on Tuesday, Wednesday and Thursday, with first pitch at 6:40 both weeknights and a 12:10 day game Thursday. After that the Chicago White Sox come in for the weekend.\nHere's the part that makes it easy in July: the Trop is a dome, so it's air conditioning, no rain delays and no sunburn. About an hour up the road for most of us, and weeknight tickets against a midweek opponent are usually easy to come by."
   },
 
   {
-    tag: "Beat the heat · Local",
-    title: "The 72-degree swimming hole hiding in Lithia",
-    body: "A lot of folks who've lived here for years have never been, so consider this your nudge. Lithia Springs, tucked along the Alafia River at 3932 Lithia Springs Rd., pumps out crystal-clear water that stays 72 degrees all year — which on a July afternoon feels like walking into a refrigerator, in the best way.\nIt's a Hillsborough County park, so it's cheap: $2 per car to get in, plus $2 a person to swim. There are lifeguards, shady picnic tables, a playground and hiking trails, and it's shallow enough that little kids do great. The catch is it's popular — capacity is capped and the weekend swim slots sell out early, often before 10 a.m. — so reserve ahead through the county site and go for the morning block if you can.\nThey also run a special evening 'Night Swims' event some Saturdays, where they light the spring with underwater lights and tiki torches for a ranger-led dip. Worth watching the county calendar for the next one."
+    tag: "On our beaches · Right now",
+    title: "It's sea turtle season — a few small things make a big difference",
+    body: "Right now, all along the Gulf beaches, sea turtles are nesting and their eggs are starting to hatch — a stretch that runs from spring into October. The hatchlings find their way to the water by following the brightest horizon, which for millions of years was the moon over the ocean.\nThe trouble is that bright lights from condos, phones and flashlights can send them crawling the wrong way, inland, where they don't survive. So if you're on the beach at night this time of year, keep it dark: no flashlights or flash photos near the dunes, and if you're in a beachfront rental, close the blinds and cut the outside lights after dark.\nA couple of daytime habits help too. Knock down sandcastles and fill in any holes before you leave, since both can trap a hatchling or a nesting mother, and never disturb a marked nest. Little stuff, but it's the difference between a nest making it or not."
   },
 
   {
-    tag: "In season · Right now",
-    title: "It's mango season, and Florida is drowning in them",
-    body: "If you've got a neighbor with a mango tree, you already know — July and August are peak mango season in Florida, and the trees are absolutely loaded this year. Keep an eye out at the roadside stands, farmers markets and the folks who set a box out front with an honor jar.\nA ripe mango gives a little when you press it and smells sweet at the stem end. Once they're ripe, keep them in the fridge so they don't turn on you all at once.\nAnd if you end up with more than you can eat, which happens fast around here — freeze the chunks for smoothies, blend a batch into salsa with red onion and lime for taco night, or just eat one standing over the sink and accept that you're going to wear some of it. That's summer."
+    tag: "Summer safety · Useful",
+    title: "We live in the lightning capital — here's the rule that matters",
+    body: "There's a reason those afternoon storms roll in like clockwork this time of year, and there's a reason Florida leads the whole country in lightning strikes and lightning deaths. Central Florida, right where we sit, is the busiest part of it.\nThe rule worth teaching the whole family is simple: when thunder roars, go indoors. If you can hear thunder at all, you're already close enough to be struck — lightning can reach out several miles from the edge of a storm, even when the sky overhead still looks blue. And don't rush back out the second the rain stops. Wait a full 30 minutes after the last rumble of thunder before heading back to the pool, the field or the yard.\nMost afternoons this week will follow the same script: dry morning, storms firing up after lunch. Get the outdoor plans done early and you'll stay ahead of it."
   },
 
   {
-    tag: "Good to know · Pets",
-    title: "The county shelter is packed, and adoptions are just $20",
-    body: "Summer is the hardest season for animal shelters — more litters, more strays, more full kennels — and the Hillsborough County Pet Resource Center on Falkenburg Road feels it every year. It's the county's only open-admission shelter, meaning they never turn an animal away, so when intake climbs, they lean on the community to help clear space.\nHere's the useful part: adopting is cheap and quick. Any pet listed as 'ready-to-go' is already spayed or neutered, vaccinated and microchipped, and goes home the same day for a $20 fee. When the shelter gets really full, they've been known to waive fees entirely, so it's worth checking their online kennel before you go.\nThey're open Monday through Saturday, 10 to 5, closed Sundays. Not in a spot to adopt? Fostering even for a couple of weeks opens up a kennel and helps just as much. You can browse the adoptable dogs and cats anytime on the county's site."
+    tag: "Free & local · This week",
+    title: "Free summer programs at the library before break ends",
+    body: "School break is winding down, and the local libraries are squeezing in a last round of free summer programs — a good, cool, no-cost way to fill an afternoon before the routine starts back up.\nThere's a full slate across the county's branches this week, including a program at the Bloomingdale Regional Library in Valrico on Tuesday. Story times, craft sessions, teen activities and more run all week, and just about everything is free, though some ask you to register ahead since space fills up.\nThe easiest move is to pull up the full calendar at HCPLC.org, pick your closest branch — Riverview, Bloomingdale or SouthShore Regional in Ruskin are the handy ones for us — and see what lines up with your week."
   },
 
   {
-    tag: "Useful · Peace of mind",
-    title: "The quiet part of hurricane season is the smart time to prep",
-    body: "Nobody wants to think about it on a nice Sunday, but here's the practical truth: we're heading into the busy stretch of hurricane season, which peaks from August through October, and we've already had a couple of named storms out there. Right now is the calm window — and the smart time to get ready, before there's a cone on the map and a run on the stores.\nNothing dramatic needed. Top off your water (a gallon per person per day, a few days' worth), check that the flashlights have working batteries, refill any prescriptions that are running low, and make sure you've got a couple weeks of any must-have medicines. Snap phone photos of your important documents while you're at it.\nDoing it now, with no storm in sight, means you're not fighting an empty shelf and a long line later. Ten quiet minutes today buys a lot of peace of mind."
+    tag: "Cheap fun · Brandon",
+    title: "Dollar movies at the Brandon multiplex, for a good cause",
+    body: "Here's one for a rainy afternoon or a bored kid: AMC Regency 20 in Brandon has been running $1 summer movies, with the proceeds going to local charities — ECHO, Center Place and the YMCA — courtesy of Chick-fil-A at Lake Brandon Village.\nA dollar a ticket for a movie in the AC is about as good as summer gets, and the money going to ECHO and the Y makes it an easy yes. It's a family-friendly lineup of titles you've likely seen before, which is half the fun of a cheap movie morning.\nThe summer series is winding down as school gets close, so check AMC's site for which titles and showtimes are left before you head over."
   }
 
 ];
